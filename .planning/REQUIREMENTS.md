@@ -77,45 +77,43 @@ Uitgesteld naar volgende versie.
 
 ## Traceability
 
-Wordt ingevuld tijdens roadmap creatie.
-
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| PAGE-01 | TBD | Pending |
-| PAGE-02 | TBD | Pending |
-| PAGE-03 | TBD | Pending |
-| PAGE-04 | TBD | Pending |
-| PAGE-05 | TBD | Pending |
-| PAGE-06 | TBD | Pending |
-| PAGE-07 | TBD | Pending |
-| PAGE-08 | TBD | Pending |
-| PAGE-09 | TBD | Pending |
-| MEDIA-01 | TBD | Pending |
-| MEDIA-02 | TBD | Pending |
-| MEDIA-03 | TBD | Pending |
-| FORM-01 | TBD | Pending |
-| FORM-02 | TBD | Pending |
-| FORM-03 | TBD | Pending |
-| FORM-04 | TBD | Pending |
-| FORM-05 | TBD | Pending |
-| CMS-01 | TBD | Pending |
-| CMS-02 | TBD | Pending |
-| CMS-03 | TBD | Pending |
-| CMS-04 | TBD | Pending |
-| CMS-05 | TBD | Pending |
-| TECH-01 | TBD | Pending |
-| TECH-02 | TBD | Pending |
-| TECH-03 | TBD | Pending |
-| TECH-04 | TBD | Pending |
-| TECH-05 | TBD | Pending |
-| TECH-06 | TBD | Pending |
-| TECH-07 | TBD | Pending |
+| PAGE-01 | Phase 4: Homepage | Pending |
+| PAGE-02 | Phase 4: Homepage | Pending |
+| PAGE-03 | Phase 5: Choir Pages | Pending |
+| PAGE-04 | Phase 5: Choir Pages | Pending |
+| PAGE-05 | Phase 5: Choir Pages | Pending |
+| PAGE-06 | Phase 6: Team Pages | Pending |
+| PAGE-07 | Phase 6: Team Pages | Pending |
+| PAGE-08 | Phase 7: Events | Pending |
+| PAGE-09 | Phase 10: Polish & Compliance | Pending |
+| MEDIA-01 | Phase 8: Media Gallery | Pending |
+| MEDIA-02 | Phase 8: Media Gallery | Pending |
+| MEDIA-03 | Phase 8: Media Gallery | Pending |
+| FORM-01 | Phase 9: Forms & Email | Pending |
+| FORM-02 | Phase 9: Forms & Email | Pending |
+| FORM-03 | Phase 9: Forms & Email | Pending |
+| FORM-04 | Phase 9: Forms & Email | Pending |
+| FORM-05 | Phase 9: Forms & Email | Pending |
+| CMS-01 | Phase 2: CMS Integration | Pending |
+| CMS-02 | Phase 7: Events | Pending |
+| CMS-03 | Phase 8: Media Gallery | Pending |
+| CMS-04 | Phase 2: CMS Integration | Pending |
+| CMS-05 | Phase 2, 6: CMS Integration, Team Pages | Pending |
+| TECH-01 | Phase 1: Project Foundation | Pending |
+| TECH-02 | Phase 3: Design System | Pending |
+| TECH-03 | Phase 10: Polish & Compliance | Pending |
+| TECH-04 | Phase 10: Polish & Compliance | Pending |
+| TECH-05 | Phase 1, 3: Foundation, Design System | Pending |
+| TECH-06 | Phase 10: Polish & Compliance | Pending |
+| TECH-07 | Phase 10: Polish & Compliance | Pending |
 
 **Coverage:**
 - v1 requirements: 26 total
-- Mapped to phases: 0
-- Unmapped: 26 ⚠️
+- Mapped to phases: 26
+- Unmapped: 0
 
 ---
 *Requirements defined: 2026-02-02*
-*Last updated: 2026-02-02 after initial definition*
+*Last updated: 2026-02-02 after roadmap creation*
