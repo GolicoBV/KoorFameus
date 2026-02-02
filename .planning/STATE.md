@@ -9,11 +9,11 @@
 | Field | Value |
 |-------|-------|
 | **Current Phase** | 1 - Project Foundation |
-| **Phase Status** | In Progress (1/4 plans complete) |
-| **Overall Progress** | 1/26 requirements (4%) |
+| **Phase Status** | In Progress (2/4 plans complete) |
+| **Overall Progress** | 2/26 requirements (8%) |
 | **Blockers** | None |
 
-**Progress:** [#.........................] 4%
+**Progress:** [##........................] 8%
 
 ---
 
@@ -21,7 +21,7 @@
 
 | Phase | Status | Notes |
 |-------|--------|-------|
-| 1. Project Foundation | **IN PROGRESS** | 01-01 complete, 01-02/03/04 pending |
+| 1. Project Foundation | **IN PROGRESS** | 01-01, 01-02 complete; 01-03/04 pending |
 | 2. CMS Integration | Pending | Depends on Phase 1 |
 | 3. Design System | Pending | Depends on Phase 1, 2 |
 | 4. Homepage | Pending | Depends on Phase 3 |
@@ -38,17 +38,18 @@
 
 ### Completed
 - TECH-01: Next.js 16 with TypeScript and App Router
+- TECH-02: shadcn/ui component library configured
 
 ### In Progress
 (None yet)
 
-### Pending (25)
+### Pending (24)
 - PAGE-01, PAGE-02, PAGE-03, PAGE-04, PAGE-05
 - PAGE-06, PAGE-07, PAGE-08, PAGE-09
 - MEDIA-01, MEDIA-02, MEDIA-03
 - FORM-01, FORM-02, FORM-03, FORM-04, FORM-05
 - CMS-01, CMS-02, CMS-03, CMS-04, CMS-05
-- TECH-02, TECH-03, TECH-04, TECH-05, TECH-06, TECH-07
+- TECH-03, TECH-04, TECH-05, TECH-06, TECH-07
 
 ---
 
@@ -60,6 +61,9 @@
 | Tailwind v4 @theme tokens | 01-01 | CSS custom properties for brand colors |
 | Dutch language (nl) in html | 01-01 | Accessibility for Dutch content |
 | Package name: koor-fameus | 01-01 | npm naming restriction (no capitals) |
+| shadcn default style (not new-york) | 01-02 | Simpler aesthetic for website |
+| Primary color = coral (oklch) | 01-02 | Brand consistency across components |
+| Keep @theme + CSS variables | 01-02 | @theme for brand, CSS vars for shadcn |
 
 ---
 
@@ -71,10 +75,10 @@
 
 ## Next Actions
 
-1. Execute 01-02: Configure Vercel deployment
-2. Execute 01-03: Install and configure shadcn/ui
-3. Execute 01-04: Set up ESLint and Prettier
-4. Complete Phase 1: Project Foundation
+1. Execute 01-03: ESLint and Prettier configuration
+2. Execute 01-04: Additional foundation setup
+3. Complete Phase 1: Project Foundation
+4. Begin Phase 2: CMS Integration
 
 ---
 
@@ -84,13 +88,14 @@
 |------|--------|---------|
 | 2026-02-02 | Roadmap created | 10 phases, 26 requirements mapped |
 | 2026-02-02 | 01-01 completed | Next.js + Tailwind v4 + Geist font |
+| 2026-02-02 | 01-02 completed | shadcn/ui + Button + Card + coral variants |
 
 ---
 
 ## Session Continuity
 
-**Last session:** 2026-02-02 21:07
-**Stopped at:** Completed 01-01-PLAN.md
+**Last session:** 2026-02-02 22:13
+**Stopped at:** Completed 01-02-PLAN.md
 **Resume file:** None
 
 ---
