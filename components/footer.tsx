@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export function Footer() {
   const currentYear = new Date().getFullYear();
 
@@ -7,14 +9,15 @@ export function Footer() {
         <div className="flex flex-col items-center gap-6 md:flex-row md:justify-between">
           {/* Logo and tagline */}
           <div className="flex flex-col items-center md:items-start gap-2">
-            <div className="flex items-center gap-2">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-coral text-white font-bold text-sm">
-                KF
-              </div>
-              <span className="font-bold text-text-primary">Koor Fameus</span>
-            </div>
+            <Image
+              src="/images/logo.png"
+              alt="Koor Fameus logo"
+              width={120}
+              height={40}
+              className="h-10 w-auto"
+            />
             <p className="text-sm text-text-muted text-center md:text-left">
-              Kinderkoor met passie voor muziek
+              Kinder- en jeugdkoor
             </p>
           </div>
 
