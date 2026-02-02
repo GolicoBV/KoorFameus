@@ -8,12 +8,12 @@
 
 | Field | Value |
 |-------|-------|
-| **Current Phase** | 1 - Project Foundation |
-| **Phase Status** | In Progress (3/4 plans complete) |
-| **Overall Progress** | 3/26 requirements (12%) |
+| **Current Phase** | 2 - CMS Integration |
+| **Phase Status** | Not Started |
+| **Overall Progress** | 2/26 requirements (8%) |
 | **Blockers** | None |
 
-**Progress:** [###.......................] 12%
+**Progress:** [##........................] 8%
 
 ---
 
@@ -21,8 +21,8 @@
 
 | Phase | Status | Notes |
 |-------|--------|-------|
-| 1. Project Foundation | **IN PROGRESS** | 01-01, 01-02, 01-03 complete; 01-04 pending |
-| 2. CMS Integration | Pending | Depends on Phase 1 |
+| 1. Project Foundation | ✓ Complete | 4 plans, deployed to Vercel |
+| 2. CMS Integration | **CURRENT** | Ready to start |
 | 3. Design System | Pending | Depends on Phase 1, 2 |
 | 4. Homepage | Pending | Depends on Phase 3 |
 | 5. Choir Pages | Pending | Depends on Phase 4 |
@@ -36,21 +36,16 @@
 
 ## Requirements Status
 
-### Completed
-- TECH-01: Next.js 16 with TypeScript and App Router
-- TECH-02: shadcn/ui component library configured
-- PAGE-01: Homepage with responsive layout (placeholder version)
+### Completed (2)
+- TECH-01: Website is volledig mobile responsive
+- TECH-05: Modern, fris visueel ontwerp (Phase 1 portion)
 
-### In Progress
-(None yet)
-
-### Pending (23)
-- PAGE-02, PAGE-03, PAGE-04, PAGE-05
-- PAGE-06, PAGE-07, PAGE-08, PAGE-09
+### Pending (24)
+- PAGE-01 through PAGE-09
 - MEDIA-01, MEDIA-02, MEDIA-03
-- FORM-01, FORM-02, FORM-03, FORM-04, FORM-05
-- CMS-01, CMS-02, CMS-03, CMS-04, CMS-05
-- TECH-03, TECH-04, TECH-05, TECH-06, TECH-07
+- FORM-01 through FORM-05
+- CMS-01 through CMS-05
+- TECH-02, TECH-03, TECH-04, TECH-06, TECH-07
 
 ---
 
@@ -62,26 +57,20 @@
 | Tailwind v4 @theme tokens | 01-01 | CSS custom properties for brand colors |
 | Dutch language (nl) in html | 01-01 | Accessibility for Dutch content |
 | Package name: koor-fameus | 01-01 | npm naming restriction (no capitals) |
-| shadcn default style (not new-york) | 01-02 | Simpler aesthetic for website |
+| shadcn default style | 01-02 | Simpler aesthetic for website |
 | Primary color = coral (oklch) | 01-02 | Brand consistency across components |
 | Keep @theme + CSS variables | 01-02 | @theme for brand, CSS vars for shadcn |
-| Logo as KF initials in coral square | 01-03 | Works at all sizes, brand recognition |
+| Logo as KF initials | 01-03 | Works at all sizes, brand recognition |
 | Feature cards with lift-on-hover | 01-03 | Playful, interactive feel |
 | Components in components/ root | 01-03 | Flat structure, easy imports |
 
 ---
 
-## Blockers
+## Deployment
 
-(None)
-
----
-
-## Next Actions
-
-1. Execute 01-04: ESLint and Prettier configuration
-2. Complete Phase 1: Project Foundation
-3. Begin Phase 2: CMS Integration
+- **GitHub:** https://github.com/GolicoBV/KoorFameus
+- **Production:** https://koorfameus.vercel.app
+- **Vercel Project:** koorfameus
 
 ---
 
@@ -90,17 +79,7 @@
 | Date | Action | Outcome |
 |------|--------|---------|
 | 2026-02-02 | Roadmap created | 10 phases, 26 requirements mapped |
-| 2026-02-02 | 01-01 completed | Next.js + Tailwind v4 + Geist font |
-| 2026-02-02 | 01-02 completed | shadcn/ui + Button + Card + coral variants |
-| 2026-02-02 | 01-03 completed | Header, Hero, Footer components + homepage |
-
----
-
-## Session Continuity
-
-**Last session:** 2026-02-02 22:18
-**Stopped at:** Completed 01-03-PLAN.md
-**Resume file:** None
+| 2026-02-02 | Phase 1 complete | Next.js + Tailwind + shadcn + Vercel |
 
 ---
 
