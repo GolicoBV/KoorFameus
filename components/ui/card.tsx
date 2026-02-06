@@ -2,6 +2,15 @@ import * as React from "react"
 
 import { cn } from "@/lib/utils"
 
+/**
+ * Card component with default shadow styling.
+ *
+ * Soft shadow variants available via className:
+ * - `shadow-soft-md border-0` - Medium soft shadow (no border)
+ * - `shadow-soft-lg border-0` - Large soft shadow (no border)
+ *
+ * Example: <Card className="shadow-soft-md border-0">...</Card>
+ */
 const Card = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
@@ -9,7 +18,7 @@ const Card = React.forwardRef<
   <div
     ref={ref}
     className={cn(
-      "rounded-lg border bg-card text-card-foreground shadow-sm",
+      "rounded-lg border bg-card text-card-foreground shadow-md",
       className
     )}
     {...props}
