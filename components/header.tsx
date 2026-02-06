@@ -53,8 +53,8 @@ export function Header() {
               href={item.href}
               className={`px-3 py-2 text-sm font-medium rounded-lg transition-colors duration-200 ${
                 isActive(item.href)
-                  ? "bg-coral/10 text-coral"
-                  : "text-text-secondary hover:text-coral hover:bg-coral/5"
+                  ? "bg-purple/10 text-purple"
+                  : "text-text-secondary hover:text-purple hover:bg-purple/5"
               }`}
             >
               {item.label}
@@ -89,8 +89,8 @@ export function Header() {
                     onClick={() => setIsOpen(false)}
                     className={`px-4 py-3 text-base font-medium rounded-lg transition-colors duration-200 ${
                       isActive(item.href)
-                        ? "bg-coral/10 text-coral"
-                        : "text-text-secondary hover:text-coral hover:bg-coral/5"
+                        ? "bg-purple/10 text-purple"
+                        : "text-text-secondary hover:text-purple hover:bg-purple/5"
                     }`}
                   >
                     {item.label}
