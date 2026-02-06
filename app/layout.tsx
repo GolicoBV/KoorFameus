@@ -1,21 +1,40 @@
 import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
 import "./globals.css";
+import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
+import { client } from "@/sanity/lib/client";
+import { siteSettingsQuery } from "@/sanity/lib/queries";
 
 export const metadata: Metadata = {
-  title: "Koor Fameus - Kinderkoor",
-  description: "Welkom bij Koor Fameus, een energiek kinderkoor",
+  title: "Koor Fameus - Kinder- en Jeugdkoor",
+  description: "Welkom bij Koor Fameus, een energiek kinder- en jeugdkoor uit Landen, België",
 };
 
-export default function RootLayout({
+async function getSiteSettings() {
+  try {
+    return await client.fetch(siteSettingsQuery);
+  } catch {
+    return null;
+  }
+}
+
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const siteSettings = await getSiteSettings();
+
   return (
     <html lang="nl" className={GeistSans.className}>
-      <body className="antialiased bg-white text-gray-900">
-        {children}
+      <body className="antialiased bg-white text-gray-900 min-h-screen flex flex-col">
+        <Header />
+        <main className="flex-grow">{children}</main>
+        <Footer
+          socialMedia={siteSettings?.socialMedia}
+          contactEmail={siteSettings?.contactEmail}
+        />
       </body>
     </html>
   );
