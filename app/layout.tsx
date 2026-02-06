@@ -3,6 +3,7 @@ import { GeistSans } from "geist/font/sans";
 import "./globals.css";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import { CookieConsent } from "@/components/cookie-consent";
 import { client } from "@/sanity/lib/client";
 import { siteSettingsQuery } from "@/sanity/lib/queries";
 
@@ -35,6 +36,7 @@ export default async function RootLayout({
           socialMedia={siteSettings?.socialMedia}
           contactEmail={siteSettings?.contactEmail}
         />
+        <CookieConsent />
       </body>
     </html>
   );

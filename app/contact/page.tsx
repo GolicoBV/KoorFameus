@@ -2,8 +2,9 @@ import { Metadata } from "next";
 import { client } from "@/sanity/lib/client";
 import { siteSettingsQuery } from "@/sanity/lib/queries";
 import { Card, CardContent } from "@/components/ui/card";
-import { Mail, MapPin, Phone, Clock } from "lucide-react";
+import { Mail, MapPin, Clock } from "lucide-react";
 import { ContactForm } from "@/components/contact-form";
+import { GoogleMap } from "@/components/google-map";
 
 export const metadata: Metadata = {
   title: "Contact | Koor Fameus",
@@ -146,6 +147,25 @@ export default async function ContactPage() {
               </Card>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Map Section */}
+      <section className="py-16 md:py-24 bg-bg-section">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl font-bold text-text-primary md:text-3xl mb-2">
+              Onze Locatie
+            </h2>
+            <p className="text-text-secondary">
+              Landen, België
+            </p>
+          </div>
+          <GoogleMap
+            address="Landen, België"
+            title="Repetitielocatie Koor Fameus"
+            className="max-w-4xl mx-auto shadow-lg"
+          />
         </div>
       </section>
     </>

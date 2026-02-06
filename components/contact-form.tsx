@@ -5,7 +5,9 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import { Checkbox } from "@/components/ui/checkbox";
 import { AlertCircle, CheckCircle, Loader2 } from "lucide-react";
+import Link from "next/link";
 
 interface FormState {
   status: "idle" | "loading" | "success" | "error";
@@ -17,9 +19,19 @@ export function ContactForm() {
     status: "idle",
     message: "",
   });
+  const [gdprConsent, setGdprConsent] = useState(false);
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
+
+    if (!gdprConsent) {
+      setFormState({
+        status: "error",
+        message: "Je moet akkoord gaan met het privacybeleid om dit formulier te versturen.",
+      });
+      return;
+    }
+
     setFormState({ status: "loading", message: "" });
 
     const formData = new FormData(event.currentTarget);
@@ -50,6 +62,7 @@ export function ContactForm() {
 
       // Reset form
       (event.target as HTMLFormElement).reset();
+      setGdprConsent(false);
     } catch {
       setFormState({
         status: "error",
@@ -111,6 +124,24 @@ export function ContactForm() {
           disabled={formState.status === "loading"}
           className="border-gray-200 focus:border-coral focus:ring-coral resize-none"
         />
+      </div>
+
+      {/* GDPR Consent */}
+      <div className="flex items-start gap-3">
+        <Checkbox
+          id="gdpr"
+          checked={gdprConsent}
+          onCheckedChange={(checked) => setGdprConsent(checked === true)}
+          disabled={formState.status === "loading"}
+          className="mt-1 data-[state=checked]:bg-coral data-[state=checked]:border-coral"
+        />
+        <Label htmlFor="gdpr" className="text-sm text-text-secondary leading-relaxed cursor-pointer">
+          Ik ga akkoord met het{" "}
+          <Link href="/privacy" className="text-coral hover:underline">
+            privacybeleid
+          </Link>{" "}
+          en geef toestemming voor de verwerking van mijn gegevens om mijn vraag te beantwoorden. *
+        </Label>
       </div>
 
       {/* Status Messages */}
