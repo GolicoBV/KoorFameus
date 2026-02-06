@@ -47,7 +47,7 @@ export function Footer({ socialMedia, contactEmail = "info@koorfameus.be" }: Foo
                   href={socialMedia.instagram}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center w-10 h-10 rounded-full bg-coral/10 text-coral hover:bg-coral hover:text-white transition-colors duration-200"
+                  className="flex items-center justify-center w-10 h-10 rounded-full bg-purple/10 text-purple hover:bg-purple hover:text-white transition-colors duration-200"
                   aria-label="Volg ons op Instagram"
                 >
                   <Instagram className="h-5 w-5" />
@@ -58,7 +58,7 @@ export function Footer({ socialMedia, contactEmail = "info@koorfameus.be" }: Foo
                   href={socialMedia.facebook}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center w-10 h-10 rounded-full bg-coral/10 text-coral hover:bg-coral hover:text-white transition-colors duration-200"
+                  className="flex items-center justify-center w-10 h-10 rounded-full bg-purple/10 text-purple hover:bg-purple hover:text-white transition-colors duration-200"
                   aria-label="Volg ons op Facebook"
                 >
                   <Facebook className="h-5 w-5" />
@@ -75,7 +75,7 @@ export function Footer({ socialMedia, contactEmail = "info@koorfameus.be" }: Foo
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="text-sm text-text-secondary hover:text-coral transition-colors duration-200"
+                  className="text-sm text-text-secondary hover:text-purple transition-colors duration-200"
                 >
                   {item.label}
                 </Link>
@@ -89,7 +89,7 @@ export function Footer({ socialMedia, contactEmail = "info@koorfameus.be" }: Foo
             <div className="flex flex-col gap-3">
               <a
                 href={`mailto:${contactEmail}`}
-                className="flex items-center gap-2 text-sm text-text-secondary hover:text-coral transition-colors duration-200"
+                className="flex items-center gap-2 text-sm text-text-secondary hover:text-purple transition-colors duration-200"
               >
                 <Mail className="h-4 w-4" />
                 {contactEmail}
@@ -108,7 +108,7 @@ export function Footer({ socialMedia, contactEmail = "info@koorfameus.be" }: Foo
             &copy; {currentYear} Koor Fameus. Alle rechten voorbehouden.
           </p>
           <div className="flex gap-4 text-sm text-text-muted">
-            <Link href="/privacy" className="hover:text-coral transition-colors duration-200">
+            <Link href="/privacy" className="hover:text-purple transition-colors duration-200">
               Privacy
             </Link>
           </div>

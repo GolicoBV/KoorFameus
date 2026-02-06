@@ -45,7 +45,7 @@ export function GoogleMap({
   if (!hasConsent && !showMap) {
     return (
       <div className={`bg-gray-100 rounded-xl p-6 flex flex-col items-center justify-center min-h-[300px] ${className}`}>
-        <MapPin className="h-12 w-12 text-coral/50 mb-4" />
+        <MapPin className="h-12 w-12 text-purple/50 mb-4" />
         <h3 className="font-semibold text-text-primary mb-2">{title}</h3>
         <p className="text-text-secondary text-center mb-4 max-w-sm">
           {address}
@@ -57,7 +57,7 @@ export function GoogleMap({
         <Button
           onClick={() => setShowMap(true)}
           variant="outline"
-          className="border-coral text-coral hover:bg-coral hover:text-white"
+          className="border-purple text-purple hover:bg-purple hover:text-white"
         >
           Toon kaart
         </Button>

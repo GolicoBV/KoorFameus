@@ -83,7 +83,7 @@ export function ContactForm() {
             placeholder="Je naam"
             required
             disabled={formState.status === "loading"}
-            className="border-gray-200 focus:border-coral focus:ring-coral"
+            className="border-gray-200 focus:border-purple focus:ring-purple"
           />
         </div>
         <div className="space-y-2">
@@ -95,7 +95,7 @@ export function ContactForm() {
             placeholder="je@email.be"
             required
             disabled={formState.status === "loading"}
-            className="border-gray-200 focus:border-coral focus:ring-coral"
+            className="border-gray-200 focus:border-purple focus:ring-purple"
           />
         </div>
       </div>
@@ -109,7 +109,7 @@ export function ContactForm() {
           placeholder="Waar gaat je bericht over?"
           required
           disabled={formState.status === "loading"}
-          className="border-gray-200 focus:border-coral focus:ring-coral"
+          className="border-gray-200 focus:border-purple focus:ring-purple"
         />
       </div>
 
@@ -122,7 +122,7 @@ export function ContactForm() {
           rows={6}
           required
           disabled={formState.status === "loading"}
-          className="border-gray-200 focus:border-coral focus:ring-coral resize-none"
+          className="border-gray-200 focus:border-purple focus:ring-purple resize-none"
         />
       </div>
 
@@ -133,11 +133,11 @@ export function ContactForm() {
           checked={gdprConsent}
           onCheckedChange={(checked) => setGdprConsent(checked === true)}
           disabled={formState.status === "loading"}
-          className="mt-1 data-[state=checked]:bg-coral data-[state=checked]:border-coral"
+          className="mt-1 data-[state=checked]:bg-purple data-[state=checked]:border-purple"
         />
         <Label htmlFor="gdpr" className="text-sm text-text-secondary leading-relaxed cursor-pointer">
           Ik ga akkoord met het{" "}
-          <Link href="/privacy" className="text-coral hover:underline">
+          <Link href="/privacy" className="text-purple hover:underline">
             privacybeleid
           </Link>{" "}
           en geef toestemming voor de verwerking van mijn gegevens om mijn vraag te beantwoorden. *
@@ -162,7 +162,7 @@ export function ContactForm() {
       <Button
         type="submit"
         disabled={formState.status === "loading"}
-        className="w-full md:w-auto bg-coral hover:bg-coral-dark text-white px-8 py-6 text-lg rounded-xl shadow-md hover:shadow-lg transition-all duration-200"
+        className="w-full md:w-auto bg-purple hover:bg-purple-dark text-white px-8 py-6 text-lg rounded-xl shadow-md hover:shadow-lg transition-all duration-200"
       >
         {formState.status === "loading" ? (
           <>

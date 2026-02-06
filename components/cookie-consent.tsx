@@ -51,7 +51,7 @@ export function CookieConsent() {
               <p className="text-sm text-text-secondary">
                 Wij gebruiken alleen functionele cookies die noodzakelijk zijn voor het goed functioneren van de website.
                 Lees meer in ons{" "}
-                <Link href="/privacy" className="text-coral hover:underline">
+                <Link href="/privacy" className="text-purple hover:underline">
                   privacybeleid
                 </Link>.
               </p>
@@ -66,7 +66,7 @@ export function CookieConsent() {
               </Button>
               <Button
                 onClick={handleAccept}
-                className="bg-coral hover:bg-coral-dark text-white"
+                className="bg-purple hover:bg-purple-dark text-white"
               >
                 Accepteren
               </Button>
