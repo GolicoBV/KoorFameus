@@ -33,6 +33,7 @@ export default defineConfig({
             S.documentTypeListItem('teamMember').title('Teamleden'),
             S.documentTypeListItem('koor').title('Koren'),
             S.documentTypeListItem('event').title('Evenementen'),
+            S.documentTypeListItem('galleryAlbum').title('Galerij Albums'),
           ]),
     }),
   ],

@@ -3,6 +3,7 @@ import { page } from './page'
 import { teamMember } from './teamMember'
 import { koor } from './koor'
 import { event } from './event'
+import { galleryAlbum } from './gallery'
 import { blockContent } from './blockContent'
 
 export const schemaTypes = [
@@ -13,6 +14,7 @@ export const schemaTypes = [
   teamMember,
   koor,
   event,
+  galleryAlbum,
   // Objects
   blockContent,
 ]

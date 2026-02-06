@@ -112,3 +112,33 @@ export const allEventsQuery = groq`
     "koren": koren[]->{ _id, name, slug }
   }
 `
+
+// Gallery Albums
+export const allGalleryAlbumsQuery = groq`
+  *[_type == "galleryAlbum"] | order(date desc, order asc) {
+    _id,
+    title,
+    slug,
+    date,
+    description,
+    coverImage,
+    "imageCount": count(images),
+    "event": event->{ _id, title }
+  }
+`
+
+export const galleryAlbumBySlugQuery = groq`
+  *[_type == "galleryAlbum" && slug.current == $slug][0] {
+    _id,
+    title,
+    slug,
+    date,
+    description,
+    coverImage,
+    images[] {
+      asset,
+      caption
+    },
+    "event": event->{ _id, title, date }
+  }
+`
