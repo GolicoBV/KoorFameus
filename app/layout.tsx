@@ -1,11 +1,19 @@
 import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
+import { Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { CookieConsent } from "@/components/cookie-consent";
 import { client } from "@/sanity/lib/client";
 import { siteSettingsQuery } from "@/sanity/lib/queries";
+
+const cormorant = Cormorant_Garamond({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-cormorant",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Koor Fameus - Kinder- en Jeugdkoor",
@@ -28,8 +36,8 @@ export default async function RootLayout({
   const siteSettings = await getSiteSettings();
 
   return (
-    <html lang="nl" className={GeistSans.className}>
-      <body className="antialiased bg-white text-gray-900 min-h-screen flex flex-col">
+    <html lang="nl" className={`${GeistSans.className} ${cormorant.variable}`}>
+      <body className="antialiased bg-background text-foreground min-h-screen flex flex-col">
         <Header />
         <main className="flex-grow">{children}</main>
         <Footer
