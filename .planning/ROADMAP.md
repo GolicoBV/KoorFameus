@@ -319,15 +319,15 @@
 | 1. Project Foundation | ✓ Complete | 2 | 2 |
 | 2. CMS Integration | ✓ Complete | 3 | 3 |
 | 3. Design System | ✓ Complete | 2 | 2 |
-| 4. Homepage | Not Started | 2 | 0 |
-| 5. Choir Pages | Not Started | 3 | 0 |
-| 6. Team Pages | Not Started | 3 | 0 |
-| 7. Events | Not Started | 2 | 0 |
-| 8. Media Gallery | Not Started | 4 | 0 |
-| 9. Forms & Email | Not Started | 5 | 0 |
-| 10. Polish & Compliance | Not Started | 5 | 0 |
+| 4. Homepage | ✓ Complete | 2 | 2 |
+| 5. Choir Pages | ✓ Complete | 3 | 3 |
+| 6. Team Pages | ✓ Complete | 3 | 3 |
+| 7. Events | ✓ Complete | 2 | 2 |
+| 8. Media Gallery | ✓ Complete | 4 | 4 |
+| 9. Forms & Email | ✓ Complete | 5 | 4 |
+| 10. Polish & Compliance | In Progress | 5 | 1 |
 
-**Overall:** 7/26 requirements completed (27%)
+**Overall:** 24/26 requirements completed (92%)
 
 ---
 
@@ -377,4 +377,4 @@
 ---
 
 *Roadmap created: 2026-02-02*
-*Last updated: 2026-02-02*
+*Last updated: 2026-02-06*

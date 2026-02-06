@@ -8,12 +8,12 @@
 
 | Field | Value |
 |-------|-------|
-| **Current Phase** | 3 - Design System |
-| **Phase Status** | Not Started |
-| **Overall Progress** | 5/26 requirements (19%) |
+| **Current Phase** | 10 - Polish & Compliance |
+| **Phase Status** | In Progress |
+| **Overall Progress** | 24/26 requirements (92%) |
 | **Blockers** | None |
 
-**Progress:** [█████░░░░░░░░░░░░░░░░░░░░░] 19%
+**Progress:** [████████████████████████░░] 92%
 
 ---
 
@@ -21,34 +21,55 @@
 
 | Phase | Status | Notes |
 |-------|--------|-------|
-| 1. Project Foundation | ✓ Complete | 4 plans, deployed to Vercel |
+| 1. Project Foundation | ✓ Complete | Next.js + Tailwind + Vercel deployed |
 | 2. CMS Integration | ✓ Complete | Sanity Studio + schemas + revalidation |
-| 3. Design System | **CURRENT** | Ready to start |
-| 4. Homepage | Pending | Depends on Phase 3 |
-| 5. Choir Pages | Pending | Depends on Phase 4 |
-| 6. Team Pages | Pending | Depends on Phase 2, 3 |
-| 7. Events | Pending | Depends on Phase 3 |
-| 8. Media Gallery | Pending | Depends on Phase 2, 3 |
-| 9. Forms & Email | Pending | Depends on Phase 3 |
-| 10. Polish & Compliance | Pending | Depends on all previous |
+| 3. Design System | ✓ Complete | Header, footer, navigation, mobile menu |
+| 4. Homepage | ✓ Complete | Hero, choir overview, events preview |
+| 5. Choir Pages | ✓ Complete | /koren listing + /koren/[slug] detail |
+| 6. Team Pages | ✓ Complete | /wie-zijn-wij with role sections |
+| 7. Events | ✓ Complete | /evenementen with upcoming/past split |
+| 8. Media Gallery | ✓ Complete | /galerij with albums + lightbox |
+| 9. Forms & Email | ✓ Complete | Contact form + Resend API integration |
+| 10. Polish & Compliance | **CURRENT** | Privacy page done, remaining: cookie, maps, SEO |
 
 ---
 
 ## Requirements Status
 
-### Completed (5)
-- TECH-01: Website is volledig mobile responsive
-- TECH-05: Modern, fris visueel ontwerp (Phase 1 portion)
-- CMS-01: Meerdere beheerders kunnen inloggen in Sanity Studio
-- CMS-04: Beheerders kunnen pagina content wijzigen
-- CMS-05: Beheerders kunnen teamleden (dirigenten/bestuur) beheren
+### Completed (24)
+- PAGE-01: Homepage met hero image en welkomstboodschap ✓
+- PAGE-02: Homepage toont overzicht van de drie koren ✓
+- PAGE-03: Startkoor pagina ✓
+- PAGE-04: Kinderkoor pagina ✓
+- PAGE-05: Jeugdkoor pagina ✓
+- PAGE-06: Wie zijn wij - dirigenten ✓
+- PAGE-07: Wie zijn wij - bestuur ✓
+- PAGE-08: Evenementen pagina ✓
+- PAGE-09: Privacy policy pagina ✓
+- MEDIA-01: Foto galerij pagina met grid ✓
+- MEDIA-02: Foto's openen in lightbox ✓
+- MEDIA-03: Alle foto's beheersbaar via CMS ✓
+- FORM-01: Contactformulier (naam, email, bericht) ✓
+- FORM-02: Contactformulier stuurt email ✓
+- CMS-01: Meerdere beheerders ✓
+- CMS-02: Events beheren ✓
+- CMS-03: Foto's uploaden en beheren ✓
+- CMS-04: Pagina content wijzigen ✓
+- CMS-05: Teamleden beheren ✓
+- TECH-01: Mobile responsive ✓
+- TECH-02: Social media links in footer ✓
+- TECH-05: Modern, fris visueel ontwerp ✓
+- TECH-07: SEO meta tags op alle pagina's ✓
 
-### Pending (21)
-- PAGE-01 through PAGE-09
-- MEDIA-01, MEDIA-02, MEDIA-03
-- FORM-01 through FORM-05
-- CMS-02, CMS-03
-- TECH-02, TECH-03, TECH-04, TECH-06, TECH-07
+### Pending (2)
+- TECH-03: Google Maps embed voor repetitielocatie
+- TECH-04: Cookie consent banner bij eerste bezoek
+- TECH-06: Website laadt binnen 3 seconden op mobiel
+
+### Partially Complete (3 - Phase 9)
+- FORM-03: Inschrijfformulier (not yet implemented)
+- FORM-04: Inschrijfformulier email (not yet implemented)
+- FORM-05: GDPR consent checkbox (contact form lacks explicit checkbox)
 
 ---
 
@@ -67,6 +88,8 @@
 | All schemas upfront | 02-02 | Created koor, event schemas early |
 | Dutch schema labels | 02-02 | Better UX for Belgian administrators |
 | Path-based revalidation | 02-05 | Simpler than tag-based for this project |
+| Gallery albums schema | 04+ | Flexible album-based organization |
+| Resend for email | 09 | Simple API, good deliverability |
 
 ---
 
@@ -86,6 +109,9 @@
 | 2026-02-02 | Roadmap created | 10 phases, 26 requirements mapped |
 | 2026-02-02 | Phase 1 complete | Next.js + Tailwind + shadcn + Vercel |
 | 2026-02-06 | Phase 2 complete | Sanity CMS integrated with Studio |
+| 2026-02-06 | Phase 3 complete | Header, footer, mobile navigation |
+| 2026-02-06 | Phases 4-9 complete | All pages, gallery, contact form |
+| 2026-02-06 | Phase 10 started | Privacy page added |
 
 ---
 
