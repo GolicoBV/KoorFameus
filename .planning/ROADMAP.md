@@ -318,7 +318,7 @@
 |-------|--------|--------------|-----------|
 | 1. Project Foundation | ✓ Complete | 2 | 2 |
 | 2. CMS Integration | ✓ Complete | 3 | 3 |
-| 3. Design System | Not Started | 2 | 0 |
+| 3. Design System | ✓ Complete | 2 | 2 |
 | 4. Homepage | Not Started | 2 | 0 |
 | 5. Choir Pages | Not Started | 3 | 0 |
 | 6. Team Pages | Not Started | 3 | 0 |
@@ -327,7 +327,7 @@
 | 9. Forms & Email | Not Started | 5 | 0 |
 | 10. Polish & Compliance | Not Started | 5 | 0 |
 
-**Overall:** 5/26 requirements completed (19%)
+**Overall:** 7/26 requirements completed (27%)
 
 ---
 
