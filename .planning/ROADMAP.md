@@ -19,6 +19,7 @@
 | 7 | Events | 2 | Events page + CMS management |
 | 8 | Media Gallery | 3 | Photo gallery with lightbox |
 | 9 | Forms & Email | 5 | Contact, registration, Resend |
+| 9.1 | Design Change | - | Visual refresh: coral to purple palette |
 | 10 | Polish & Compliance | 5 | SEO, cookies, privacy, performance |
 
 **Total mapped:** 26/26 requirements
@@ -278,11 +279,38 @@
 
 ---
 
+### Phase 9.1: Design Change (INSERTED)
+
+**Goal:** Visual refresh to align with KoorFameus brand identity. Replace coral color palette with purple-orange, add elegant typography, implement soft shadows.
+
+**Depends on:** Phase 9
+
+**Requirements:**
+- Replace coral (#F3504C) with purple (violet-500) as primary color
+- Add orange-500 as accent color
+- Implement Cormorant Garamond font for headings
+- Update all components and pages to use new color palette
+- Add soft shadow system for elevated cards
+
+**Success Criteria:**
+1. Purple is the primary color throughout the site (buttons, links, accents)
+2. Headings display in elegant Cormorant Garamond serif font
+3. Cards use soft layered shadows with purple tint
+4. Zero coral references remain in codebase
+5. Visual design feels elegant, musical, and child-friendly
+
+**Plans:** 3 plans
+- [ ] 09.1-01-PLAN.md — Design foundation (globals.css, layout.tsx, button.tsx)
+- [ ] 09.1-02-PLAN.md — Component updates (header, footer, forms, cards)
+- [ ] 09.1-03-PLAN.md — Page updates + visual verification
+
+---
+
 ### Phase 10: Polish & Compliance
 
 **Goal:** Finalize the website with SEO, cookie consent, privacy policy, and performance optimization.
 
-**Depends on:** Phase 4, Phase 5, Phase 6, Phase 7, Phase 8, Phase 9
+**Depends on:** Phase 4, Phase 5, Phase 6, Phase 7, Phase 8, Phase 9, Phase 9.1
 
 **Requirements:**
 - PAGE-09: Privacy policy pagina met GDPR-conforme tekst
@@ -325,7 +353,8 @@
 | 7. Events | ✓ Complete | 2 | 2 |
 | 8. Media Gallery | ✓ Complete | 4 | 4 |
 | 9. Forms & Email | ✓ Complete | 5 | 4 |
-| 10. Polish & Compliance | In Progress | 5 | 1 |
+| 9.1 Design Change | Planned | - | 0 |
+| 10. Polish & Compliance | Blocked | 5 | 1 |
 
 **Overall:** 24/26 requirements completed (92%)
 
