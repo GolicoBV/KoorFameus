@@ -317,7 +317,7 @@
 | Phase | Status | Requirements | Completed |
 |-------|--------|--------------|-----------|
 | 1. Project Foundation | ✓ Complete | 2 | 2 |
-| 2. CMS Integration | Not Started | 3 | 0 |
+| 2. CMS Integration | ✓ Complete | 3 | 3 |
 | 3. Design System | Not Started | 2 | 0 |
 | 4. Homepage | Not Started | 2 | 0 |
 | 5. Choir Pages | Not Started | 3 | 0 |
@@ -327,7 +327,7 @@
 | 9. Forms & Email | Not Started | 5 | 0 |
 | 10. Polish & Compliance | Not Started | 5 | 0 |
 
-**Overall:** 2/26 requirements completed (8%)
+**Overall:** 5/26 requirements completed (19%)
 
 ---
 

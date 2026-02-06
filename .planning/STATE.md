@@ -1,6 +1,6 @@
 # Project State: KoorFameus Website
 
-**Last Updated:** 2026-02-02
+**Last Updated:** 2026-02-06
 
 ---
 
@@ -8,12 +8,12 @@
 
 | Field | Value |
 |-------|-------|
-| **Current Phase** | 2 - CMS Integration |
+| **Current Phase** | 3 - Design System |
 | **Phase Status** | Not Started |
-| **Overall Progress** | 2/26 requirements (8%) |
+| **Overall Progress** | 5/26 requirements (19%) |
 | **Blockers** | None |
 
-**Progress:** [##........................] 8%
+**Progress:** [█████░░░░░░░░░░░░░░░░░░░░░] 19%
 
 ---
 
@@ -22,8 +22,8 @@
 | Phase | Status | Notes |
 |-------|--------|-------|
 | 1. Project Foundation | ✓ Complete | 4 plans, deployed to Vercel |
-| 2. CMS Integration | **CURRENT** | Ready to start |
-| 3. Design System | Pending | Depends on Phase 1, 2 |
+| 2. CMS Integration | ✓ Complete | Sanity Studio + schemas + revalidation |
+| 3. Design System | **CURRENT** | Ready to start |
 | 4. Homepage | Pending | Depends on Phase 3 |
 | 5. Choir Pages | Pending | Depends on Phase 4 |
 | 6. Team Pages | Pending | Depends on Phase 2, 3 |
@@ -36,15 +36,18 @@
 
 ## Requirements Status
 
-### Completed (2)
+### Completed (5)
 - TECH-01: Website is volledig mobile responsive
 - TECH-05: Modern, fris visueel ontwerp (Phase 1 portion)
+- CMS-01: Meerdere beheerders kunnen inloggen in Sanity Studio
+- CMS-04: Beheerders kunnen pagina content wijzigen
+- CMS-05: Beheerders kunnen teamleden (dirigenten/bestuur) beheren
 
-### Pending (24)
+### Pending (21)
 - PAGE-01 through PAGE-09
 - MEDIA-01, MEDIA-02, MEDIA-03
 - FORM-01 through FORM-05
-- CMS-01 through CMS-05
+- CMS-02, CMS-03
 - TECH-02, TECH-03, TECH-04, TECH-06, TECH-07
 
 ---
@@ -59,10 +62,11 @@
 | Package name: koor-fameus | 01-01 | npm naming restriction (no capitals) |
 | shadcn default style | 01-02 | Simpler aesthetic for website |
 | Primary color = coral (oklch) | 01-02 | Brand consistency across components |
-| Keep @theme + CSS variables | 01-02 | @theme for brand, CSS vars for shadcn |
-| Logo as KF initials | 01-03 | Works at all sizes, brand recognition |
-| Feature cards with lift-on-hover | 01-03 | Playful, interactive feel |
-| Components in components/ root | 01-03 | Flat structure, easy imports |
+| Logo as official treble clef | 01-03 | Official KoorFameus branding |
+| Sanity project ID: rzrgvvg3 | 02-01 | Production dataset |
+| All schemas upfront | 02-02 | Created koor, event schemas early |
+| Dutch schema labels | 02-02 | Better UX for Belgian administrators |
+| Path-based revalidation | 02-05 | Simpler than tag-based for this project |
 
 ---
 
@@ -70,7 +74,8 @@
 
 - **GitHub:** https://github.com/GolicoBV/KoorFameus
 - **Production:** https://koorfameus.vercel.app
-- **Vercel Project:** koorfameus
+- **Studio:** https://koorfameus.vercel.app/studio
+- **Sanity Manage:** https://sanity.io/manage/project/rzrgvvg3
 
 ---
 
@@ -80,6 +85,7 @@
 |------|--------|---------|
 | 2026-02-02 | Roadmap created | 10 phases, 26 requirements mapped |
 | 2026-02-02 | Phase 1 complete | Next.js + Tailwind + shadcn + Vercel |
+| 2026-02-06 | Phase 2 complete | Sanity CMS integrated with Studio |
 
 ---
 
