@@ -8,8 +8,8 @@
 
 | Field | Value |
 |-------|-------|
-| **Current Phase** | 10 - Polish & Compliance |
-| **Phase Status** | In Progress |
+| **Current Phase** | 9.1 - Design Change |
+| **Phase Status** | In Progress (Plan 02 complete) |
 | **Overall Progress** | 24/26 requirements (92%) |
 | **Blockers** | None |
 
@@ -30,7 +30,8 @@
 | 7. Events | ✓ Complete | /evenementen with upcoming/past split |
 | 8. Media Gallery | ✓ Complete | /galerij with albums + lightbox |
 | 9. Forms & Email | ✓ Complete | Contact form + Resend API integration |
-| 10. Polish & Compliance | **CURRENT** | Privacy page done, remaining: cookie, maps, SEO |
+| 9.1 Design Change | **CURRENT** | Plan 01-02 complete, purple palette + shared components |
+| 10. Polish & Compliance | Blocked | Waiting on 9.1; Privacy page done |
 
 ---
 
@@ -90,6 +91,9 @@
 | Path-based revalidation | 02-05 | Simpler than tag-based for this project |
 | Gallery albums schema | 04+ | Flexible album-based organization |
 | Resend for email | 09 | Simple API, good deliverability |
+| Primary color = purple (oklch) | 09.1-01 | Design change from coral to purple |
+| Card default shadow = shadow-md | 09.1-02 | Better visual depth for elevated cards |
+| Soft shadows via className | 09.1-02 | Keep simple shadcn pattern, no cva variants |
 
 ---
 
@@ -112,6 +116,18 @@
 | 2026-02-06 | Phase 3 complete | Header, footer, mobile navigation |
 | 2026-02-06 | Phases 4-9 complete | All pages, gallery, contact form |
 | 2026-02-06 | Phase 10 started | Privacy page added |
+| 2026-02-06 | Phase 9.1 inserted | Design change (URGENT) - coral to purple |
+| 2026-02-06 | 09.1-02 complete | Shared components updated to purple |
+
+---
+
+## Session Continuity
+
+| Field | Value |
+|-------|-------|
+| Last session | 2026-02-06T20:39:16Z |
+| Stopped at | Completed 09.1-02-PLAN.md |
+| Resume file | None |
 
 ---
 
