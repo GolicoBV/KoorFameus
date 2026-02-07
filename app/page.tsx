@@ -74,12 +74,6 @@ export default async function Home() {
             fill="none"
             opacity="0.5"
           />
-          {/* Music symbols along the curve */}
-          <text x="30" y="200" fontSize="6" fill="url(#gradient)" opacity="0.4">&#119070;</text>
-          <text x="20" y="400" fontSize="4" fill="url(#gradient)" opacity="0.3">&#9834;</text>
-          <text x="50" y="500" fontSize="5" fill="url(#gradient)" opacity="0.35">&#9835;</text>
-          <text x="80" y="600" fontSize="6" fill="url(#gradient)" opacity="0.4">&#119070;</text>
-          <text x="70" y="800" fontSize="4" fill="url(#gradient)" opacity="0.3">&#9833;</text>
           <defs>
             <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
               <stop offset="0%" stopColor="var(--color-purple)" />
