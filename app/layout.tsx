@@ -41,14 +41,14 @@ export default async function RootLayout({
         <div className="absolute inset-0 overflow-hidden pointer-events-none z-0 h-full">
           <svg
             className="absolute top-0 left-0 w-full h-full"
-            viewBox="0 0 100 1000"
+            viewBox="0 0 100 3000"
             preserveAspectRatio="none"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
             {/* Glow effect */}
             <path
-              d="M50 0 C0 500, 100 500, 50 1000"
+              d="M50 0 C0 1500, 100 1500, 50 3000"
               stroke="url(#layout-gradient)"
               strokeWidth="6"
               fill="none"
@@ -56,7 +56,7 @@ export default async function RootLayout({
             />
             {/* Main flowing curve */}
             <path
-              d="M50 0 C0 500, 100 500, 50 1000"
+              d="M50 0 C0 1500, 100 1500, 50 3000"
               stroke="url(#layout-gradient)"
               strokeWidth="1"
               fill="none"
