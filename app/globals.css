@@ -193,6 +193,16 @@
   }
 }
 
+/* Custom cursor - logo for default arrow only */
+* {
+  cursor: url('/images/cursor-logo.png') 16 16, auto;
+}
+
+/* Keep normal pointer for interactive elements */
+a, button, [role="button"], input, select, textarea, label, summary {
+  cursor: pointer;
+}
+
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
