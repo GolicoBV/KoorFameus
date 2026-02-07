@@ -100,7 +100,7 @@ export default async function Home() {
               alt="Koor Fameus Logo"
               width={320}
               height={320}
-              className="w-48 md:w-64 lg:w-80 h-auto mx-auto drop-shadow-xl"
+              className="w-48 md:w-64 lg:w-80 h-auto mx-auto drop-shadow-xl relative z-10"
               priority
             />
           </div>
