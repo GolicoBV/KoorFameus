@@ -101,7 +101,7 @@ export default async function ContactPage() {
                             {siteSettings.address.postalCode} {siteSettings.address.city}
                           </>
                         ) : (
-                          "Landen, België"
+                          <>De Villa<br />Landen, België</>
                         )}
                       </p>
                     </div>
@@ -158,12 +158,12 @@ export default async function ContactPage() {
               Onze Locatie
             </h2>
             <p className="text-text-secondary">
-              Landen, België
+              De Villa, Landen
             </p>
           </div>
           <GoogleMap
-            address="Landen, België"
-            title="Repetitielocatie Koor Fameus"
+            address="De Villa, Stationsstraat, Landen, België"
+            title="De Villa - Repetitielocatie Koor Fameus"
             className="max-w-4xl mx-auto shadow-lg"
           />
         </div>
