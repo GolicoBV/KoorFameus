@@ -59,42 +59,31 @@ export default async function Home() {
           {/* Glow effect */}
           <path
             d="M50 0
-               C10 80, 90 160, 50 240
-               C10 320, 90 400, 50 480
-               C10 560, 90 640, 50 720
-               C10 800, 90 880, 50 960
-               L50 1000"
+               C0 250, 100 250, 50 500
+               C0 750, 100 750, 50 1000"
             stroke="url(#gradient)"
-            strokeWidth="2"
+            strokeWidth="6"
             fill="none"
-            opacity="0.08"
+            opacity="0.1"
           />
           {/* Main flowing curve */}
           <path
             d="M50 0
-               C10 80, 90 160, 50 240
-               C10 320, 90 400, 50 480
-               C10 560, 90 640, 50 720
-               C10 800, 90 880, 50 960
-               L50 1000"
+               C0 250, 100 250, 50 500
+               C0 750, 100 750, 50 1000"
             stroke="url(#gradient)"
-            strokeWidth="0.3"
+            strokeWidth="1"
             fill="none"
             opacity="0.5"
           />
           {/* Music symbols along the curve */}
-          <text x="30" y="60" fontSize="5" fill="url(#gradient)" opacity="0.35">&#119070;</text>
-          <text x="75" y="120" fontSize="3" fill="url(#gradient)" opacity="0.25">&#9834;</text>
-          <text x="22" y="200" fontSize="4" fill="url(#gradient)" opacity="0.3">&#9835;</text>
-          <text x="82" y="280" fontSize="5" fill="url(#gradient)" opacity="0.35">&#119070;</text>
-          <text x="28" y="360" fontSize="3" fill="url(#gradient)" opacity="0.25">&#9833;</text>
-          <text x="78" y="440" fontSize="4" fill="url(#gradient)" opacity="0.3">&#9834;</text>
-          <text x="25" y="520" fontSize="5" fill="url(#gradient)" opacity="0.35">&#119070;</text>
-          <text x="80" y="600" fontSize="3" fill="url(#gradient)" opacity="0.25">&#9835;</text>
-          <text x="30" y="680" fontSize="4" fill="url(#gradient)" opacity="0.3">&#9834;</text>
-          <text x="75" y="760" fontSize="5" fill="url(#gradient)" opacity="0.35">&#119070;</text>
-          <text x="28" y="840" fontSize="3" fill="url(#gradient)" opacity="0.25">&#9833;</text>
-          <text x="78" y="920" fontSize="4" fill="url(#gradient)" opacity="0.3">&#9834;</text>
+          <text x="25" y="125" fontSize="6" fill="url(#gradient)" opacity="0.4">&#119070;</text>
+          <text x="75" y="250" fontSize="4" fill="url(#gradient)" opacity="0.3">&#9834;</text>
+          <text x="30" y="375" fontSize="5" fill="url(#gradient)" opacity="0.35">&#9835;</text>
+          <text x="70" y="500" fontSize="6" fill="url(#gradient)" opacity="0.4">&#119070;</text>
+          <text x="25" y="625" fontSize="4" fill="url(#gradient)" opacity="0.3">&#9833;</text>
+          <text x="75" y="750" fontSize="5" fill="url(#gradient)" opacity="0.35">&#9834;</text>
+          <text x="30" y="875" fontSize="6" fill="url(#gradient)" opacity="0.4">&#119070;</text>
           <defs>
             <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
               <stop offset="0%" stopColor="var(--color-purple)" />
@@ -106,7 +95,7 @@ export default async function Home() {
       </div>
 
       {/* Hero Section - Centered with logo */}
-      <section className="relative bg-gradient-to-b from-purple/5 to-white py-16 md:py-24">
+      <section className="relative py-16 md:py-24">
         <div className="container mx-auto px-4 md:px-6 text-center">
           {/* 3D Logo */}
           <div className="mb-8">
@@ -157,7 +146,7 @@ export default async function Home() {
 
       {/* Flowing sections with alternating photos */}
       {/* Section 1: Photo RIGHT */}
-      <section className="relative bg-white overflow-hidden">
+      <section className="relative overflow-hidden">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center py-16 md:py-24">
             <div className="order-2 lg:order-1">
@@ -196,7 +185,7 @@ export default async function Home() {
       </section>
 
       {/* Section 2: Photo LEFT */}
-      <section className="relative bg-purple/5 overflow-hidden">
+      <section className="relative overflow-hidden">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center py-16 md:py-24">
             <div className="relative">
@@ -236,7 +225,7 @@ export default async function Home() {
 
       {/* Koren Overview Section */}
       {koren && koren.length > 0 && (
-        <section className="py-16 md:py-24 bg-white relative overflow-hidden">
+        <section className="py-16 md:py-24 relative overflow-hidden">
           <div className="container mx-auto px-4 md:px-6">
             <div className="text-center mb-14">
               <p className="text-purple text-sm font-medium tracking-widest uppercase mb-3">
@@ -278,7 +267,7 @@ export default async function Home() {
       )}
 
       {/* Why Join Section - with photo RIGHT */}
-      <section className="relative bg-purple/5 overflow-hidden">
+      <section className="relative overflow-hidden">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center py-16 md:py-24">
             <div>
@@ -346,7 +335,7 @@ export default async function Home() {
 
       {/* Upcoming Events Section - with photo LEFT */}
       {events && events.length > 0 && (
-        <section className="relative bg-white overflow-hidden">
+        <section className="relative overflow-hidden">
           <div className="container mx-auto px-4 md:px-6">
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center py-16 md:py-24">
               <div className="relative">
