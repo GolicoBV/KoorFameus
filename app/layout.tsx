@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Nunito, Cormorant_Garamond } from "next/font/google";
+import { Quicksand } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
@@ -7,17 +7,10 @@ import { CookieConsent } from "@/components/cookie-consent";
 import { client } from "@/sanity/lib/client";
 import { siteSettingsQuery } from "@/sanity/lib/queries";
 
-const nunito = Nunito({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
-  variable: "--font-nunito",
-  display: "swap",
-});
-
-const cormorant = Cormorant_Garamond({
+const quicksand = Quicksand({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
-  variable: "--font-cormorant",
+  variable: "--font-quicksand",
   display: "swap",
 });
 
@@ -42,7 +35,7 @@ export default async function RootLayout({
   const siteSettings = await getSiteSettings();
 
   return (
-    <html lang="nl" className={`${nunito.className} ${cormorant.variable}`}>
+    <html lang="nl" className={quicksand.className}>
       <body className="antialiased bg-background text-foreground min-h-screen flex flex-col">
         <Header />
         <main className="flex-grow">{children}</main>
