@@ -53,7 +53,19 @@ export default async function Home() {
           <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[85vh] py-12">
             {/* Left: Text Content */}
             <div className="max-w-xl">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-text-primary mb-6 leading-tight">
+              {/* 3D Logo */}
+              <div className="mb-8">
+                <Image
+                  src="/images/logo-3d.png"
+                  alt="Koor Fameus Logo"
+                  width={280}
+                  height={280}
+                  className="w-48 md:w-64 lg:w-72 h-auto"
+                  priority
+                />
+              </div>
+
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-text-primary mb-6 leading-tight">
                 Ontdek de vreugde van{" "}
                 <span className="text-purple">samen zingen</span>
               </h1>
