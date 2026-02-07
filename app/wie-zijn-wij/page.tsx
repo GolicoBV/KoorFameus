@@ -1,11 +1,7 @@
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { client } from "@/sanity/lib/client";
-import { teamMembersQuery } from "@/sanity/lib/queries";
-import { urlFor } from "@/sanity/lib/image";
-import { Card, CardContent } from "@/components/ui/card";
-import { Mail, Music } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Wie Zijn Wij | Koor Fameus",
@@ -13,156 +9,237 @@ export const metadata: Metadata = {
 };
 
 interface TeamMember {
-  _id: string;
+  id: string;
   name: string;
   role: string;
-  function: string;
-  photo?: {
-    asset: {
-      _ref: string;
-    };
-  };
-  localImage?: string;
+  image: string;
   bio?: string;
-  email?: string;
-  koren?: { _id: string; name: string; slug: { current: string } }[];
 }
 
-// Static team data with local images
-const staticTeamMembers: TeamMember[] = [
-  // Dirigenten
+const dirigenten: TeamMember[] = [
   {
-    _id: "dirigent-lief",
+    id: "lief",
     name: "Lief",
-    role: "dirigent",
-    function: "Dirigent",
-    localImage: "/images/dirigent_lief.jpg",
+    role: "Dirigent",
+    image: "/images/dirigent_lief.jpg",
   },
   {
-    _id: "dirigent-freya",
+    id: "freya",
     name: "Freya",
-    role: "dirigent",
-    function: "Dirigent",
-    localImage: "/images/dirigent_freya.jpg",
+    role: "Dirigent",
+    image: "/images/dirigent_freya.jpg",
   },
   {
-    _id: "dirigent-karolien",
+    id: "karolien",
     name: "Karolien",
-    role: "dirigent",
-    function: "Dirigent",
-    localImage: "/images/dirigent_karolien.jpg",
-  },
-  // Bestuur
-  {
-    _id: "bestuur-adriaan",
-    name: "Adriaan",
-    role: "bestuur",
-    function: "Bestuurslid",
-    localImage: "/images/bestuur_adriaan.png",
-  },
-  {
-    _id: "bestuur-ellen",
-    name: "Ellen",
-    role: "bestuur",
-    function: "Bestuurslid",
-    localImage: "/images/bestuur_ellen.jpg",
-  },
-  {
-    _id: "bestuur-inge",
-    name: "Inge",
-    role: "bestuur",
-    function: "Bestuurslid",
-    localImage: "/images/bestuur_inge.jpg",
-  },
-  {
-    _id: "bestuur-linda",
-    name: "Linda",
-    role: "bestuur",
-    function: "Bestuurslid",
-    localImage: "/images/bestuur_linda.jpg",
+    role: "Dirigent",
+    image: "/images/dirigent_karolien.jpg",
   },
 ];
 
-async function getTeamMembers() {
-  try {
-    const cmsMembers = await client.fetch<TeamMember[]>(teamMembersQuery);
-    // Use CMS data if available, otherwise use static data
-    return cmsMembers && cmsMembers.length > 0 ? cmsMembers : staticTeamMembers;
-  } catch {
-    return staticTeamMembers;
-  }
-}
+const bestuur: TeamMember[] = [
+  {
+    id: "adriaan",
+    name: "Adriaan",
+    role: "Bestuurslid",
+    image: "/images/bestuur_adriaan.png",
+  },
+  {
+    id: "ellen",
+    name: "Ellen",
+    role: "Bestuurslid",
+    image: "/images/bestuur_ellen.jpg",
+  },
+  {
+    id: "inge",
+    name: "Inge",
+    role: "Bestuurslid",
+    image: "/images/bestuur_inge.jpg",
+  },
+  {
+    id: "linda",
+    name: "Linda",
+    role: "Bestuurslid",
+    image: "/images/bestuur_linda.jpg",
+  },
+];
 
-export default async function WieZijnWijPage() {
-  const teamMembers = await getTeamMembers();
-
-  // Group by role
-  const directors = teamMembers.filter((m) => m.role === "dirigent");
-  const pianists = teamMembers.filter((m) => m.role === "pianist");
-  const board = teamMembers.filter((m) => m.role === "bestuur");
-  const other = teamMembers.filter(
-    (m) => !["dirigent", "pianist", "bestuur"].includes(m.role)
-  );
-
+export default function WieZijnWijPage() {
   return (
-    <>
-      {/* Page Header */}
-      <section className="bg-gradient-to-b from-bg-white to-bg-section py-12 md:py-16">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="text-center max-w-3xl mx-auto">
-            <h1 className="text-4xl font-bold text-text-primary md:text-5xl mb-4">
-              Wie Zijn <span className="text-purple">Wij</span>
-            </h1>
-            <p className="text-lg text-text-secondary">
-              Maak kennis met het gepassioneerde team achter Koor Fameus.
-              Samen zorgen we voor een inspirerende en plezierige muzikale ervaring.
-            </p>
-          </div>
+    <div className="relative">
+      {/* Hero Section */}
+      <section className="relative py-16 md:py-24">
+        <div className="container mx-auto px-4 md:px-6 text-center">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-text-primary mb-6">
+            Wie Zijn <span className="text-purple">Wij</span>
+          </h1>
+          <p className="text-lg text-text-secondary max-w-2xl mx-auto">
+            Maak kennis met het gepassioneerde team achter Koor Fameus.
+            Samen zorgen we voor een inspirerende en plezierige muzikale ervaring.
+          </p>
         </div>
       </section>
 
-      {/* Dirigenten Section */}
-      {directors.length > 0 && (
-        <TeamSection
-          title="Dirigenten"
-          description="Onze dirigenten leiden met passie en enthousiasme de repetities en optredens."
-          members={directors}
-          featured
-        />
-      )}
+      {/* Dirigenten Section - Flowing layout */}
+      <section className="relative overflow-hidden">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="text-center mb-12">
+            <p className="text-purple text-sm font-medium tracking-widest uppercase mb-3">Onze leiders</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-4">
+              Dirigenten
+            </h2>
+            <p className="text-text-secondary max-w-2xl mx-auto">
+              Onze dirigenten leiden met passie en enthousiasme de repetities en optredens.
+            </p>
+          </div>
 
-      {/* Pianisten Section */}
-      {pianists.length > 0 && (
-        <TeamSection
-          title="Pianisten"
-          description="Onze pianisten begeleiden de koren met talent en toewijding."
-          members={pianists}
-        />
-      )}
+          {/* Dirigent 1 - Photo RIGHT */}
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center py-12">
+            <div className="order-2 lg:order-1">
+              <h3 className="text-2xl md:text-3xl font-bold text-text-primary mb-4">
+                {dirigenten[0].name}
+              </h3>
+              <p className="text-purple font-medium mb-4">{dirigenten[0].role}</p>
+              <p className="text-text-secondary leading-relaxed">
+                Met passie en enthousiasme leidt {dirigenten[0].name} onze zangers naar muzikale hoogtes.
+              </p>
+            </div>
+            <div className="order-1 lg:order-2 relative">
+              <div
+                className="relative h-[300px] md:h-[400px] overflow-hidden shadow-xl"
+                style={{ clipPath: 'polygon(15% 0, 100% 0, 100% 100%, 15% 100%, 0% 75%, 5% 50%, 0% 25%)' }}
+              >
+                <Image
+                  src={dirigenten[0].image}
+                  alt={dirigenten[0].name}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="absolute -z-10 -top-8 -right-8 w-48 h-48 bg-purple/10 rounded-full blur-2xl" />
+              <div className="absolute -z-10 -bottom-8 -left-8 w-32 h-32 bg-orange/10 rounded-full blur-2xl" />
+            </div>
+          </div>
+
+          {/* Dirigent 2 - Photo LEFT */}
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center py-12">
+            <div className="relative">
+              <div
+                className="relative h-[300px] md:h-[400px] overflow-hidden shadow-xl"
+                style={{ clipPath: 'polygon(0 0, 85% 0, 100% 25%, 95% 50%, 100% 75%, 85% 100%, 0 100%)' }}
+              >
+                <Image
+                  src={dirigenten[1].image}
+                  alt={dirigenten[1].name}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="absolute -z-10 -top-8 -left-8 w-48 h-48 bg-orange/10 rounded-full blur-2xl" />
+              <div className="absolute -z-10 -bottom-8 -right-8 w-32 h-32 bg-purple/10 rounded-full blur-2xl" />
+            </div>
+            <div>
+              <h3 className="text-2xl md:text-3xl font-bold text-text-primary mb-4">
+                {dirigenten[1].name}
+              </h3>
+              <p className="text-purple font-medium mb-4">{dirigenten[1].role}</p>
+              <p className="text-text-secondary leading-relaxed">
+                {dirigenten[1].name} brengt muzikale magie in elke repetitie en elk optreden.
+              </p>
+            </div>
+          </div>
+
+          {/* Dirigent 3 - Photo RIGHT */}
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center py-12">
+            <div className="order-2 lg:order-1">
+              <h3 className="text-2xl md:text-3xl font-bold text-text-primary mb-4">
+                {dirigenten[2].name}
+              </h3>
+              <p className="text-purple font-medium mb-4">{dirigenten[2].role}</p>
+              <p className="text-text-secondary leading-relaxed">
+                De creatieve aanpak van {dirigenten[2].name} inspireert onze jonge zangers om te groeien.
+              </p>
+            </div>
+            <div className="order-1 lg:order-2 relative">
+              <div
+                className="relative h-[300px] md:h-[400px] overflow-hidden shadow-xl"
+                style={{ clipPath: 'polygon(15% 0, 100% 0, 100% 100%, 15% 100%, 0% 75%, 5% 50%, 0% 25%)' }}
+              >
+                <Image
+                  src={dirigenten[2].image}
+                  alt={dirigenten[2].name}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="absolute -z-10 -top-8 -right-8 w-48 h-48 bg-purple/10 rounded-full blur-2xl" />
+              <div className="absolute -z-10 -bottom-8 -left-8 w-32 h-32 bg-orange/10 rounded-full blur-2xl" />
+            </div>
+          </div>
+        </div>
+
+        {/* Wave divider */}
+        <svg viewBox="0 0 1440 100" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-auto -mb-1 mt-8">
+          <path d="M0 100V60C240 20 480 0 720 0C960 0 1200 20 1440 60V100H0Z" className="fill-purple/5"/>
+        </svg>
+      </section>
 
       {/* Bestuur Section */}
-      {board.length > 0 && (
-        <TeamSection
-          title="Bestuur"
-          description="Het bestuur zorgt voor de organisatie en ondersteuning van ons koor."
-          members={board}
-          bgColor="bg-bg-section"
-        />
-      )}
+      <section className="relative overflow-hidden py-16 md:py-24">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="text-center mb-12">
+            <p className="text-purple text-sm font-medium tracking-widest uppercase mb-3">Achter de schermen</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-4">
+              Bestuur
+            </h2>
+            <p className="text-text-secondary max-w-2xl mx-auto">
+              Het bestuur zorgt voor de organisatie en ondersteuning van ons koor.
+            </p>
+          </div>
 
-      {/* Other Team Members */}
-      {other.length > 0 && (
-        <TeamSection
-          title="Team"
-          description="Andere belangrijke teamleden die bijdragen aan ons succes."
-          members={other}
-        />
-      )}
+          {/* Bestuur grid with curved photos */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {bestuur.map((member, index) => (
+              <div key={member.id} className="relative group">
+                <div
+                  className="relative h-[280px] overflow-hidden shadow-lg"
+                  style={{
+                    clipPath: index % 2 === 0
+                      ? 'polygon(10% 0, 100% 0, 100% 100%, 10% 100%, 0% 80%, 5% 50%, 0% 20%)'
+                      : 'polygon(0 0, 90% 0, 100% 20%, 95% 50%, 100% 80%, 90% 100%, 0 100%)'
+                  }}
+                >
+                  <Image
+                    src={member.image}
+                    alt={member.name}
+                    fill
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                  <div className="absolute bottom-4 left-4 right-4">
+                    <h3 className="text-lg font-semibold text-white">{member.name}</h3>
+                    <p className="text-white/80 text-sm">{member.role}</p>
+                  </div>
+                </div>
+                {/* Decorative blob */}
+                <div className="absolute -z-10 -bottom-4 -right-4 w-24 h-24 bg-purple/10 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity" />
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Wave divider */}
+        <svg viewBox="0 0 1440 100" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-auto -mb-1 mt-16">
+          <path d="M0 100V40C240 80 480 100 720 60C960 20 1200 40 1440 80V100H0Z" className="fill-purple"/>
+        </svg>
+      </section>
 
       {/* CTA Section */}
-      <section className="py-16 md:py-24 bg-purple">
-        <div className="container mx-auto px-4 md:px-6 text-center">
-          <h2 className="text-3xl font-bold text-white md:text-4xl mb-4">
+      <section className="py-20 md:py-28 bg-gradient-to-br from-purple via-purple-dark to-purple relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-orange/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+        <div className="absolute bottom-0 left-0 w-72 h-72 bg-white/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
+        <div className="container mx-auto px-4 md:px-6 text-center relative">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Wil je ons team versterken?
           </h2>
           <p className="text-white/90 max-w-2xl mx-auto mb-8 text-lg">
@@ -171,121 +248,13 @@ export default async function WieZijnWijPage() {
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center bg-white text-purple hover:bg-gray-100 px-8 py-4 text-lg font-medium rounded-xl shadow-md hover:shadow-lg transition-all duration-200"
+            className="inline-flex items-center justify-center bg-white text-purple hover:bg-purple-light hover:text-white px-8 py-4 text-lg font-medium rounded-xl shadow-md hover:shadow-lg transition-all duration-200"
           >
             Neem contact op
+            <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
         </div>
       </section>
-    </>
-  );
-}
-
-function TeamSection({
-  title,
-  description,
-  members,
-  featured = false,
-  bgColor = "bg-bg-white",
-}: {
-  title: string;
-  description: string;
-  members: TeamMember[];
-  featured?: boolean;
-  bgColor?: string;
-}) {
-  return (
-    <section className={`py-16 md:py-24 ${bgColor}`}>
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-text-primary md:text-4xl mb-4">
-            {title}
-          </h2>
-          <p className="text-text-secondary max-w-2xl mx-auto">{description}</p>
-        </div>
-
-        <div
-          className={`grid gap-8 ${
-            featured
-              ? "md:grid-cols-2 lg:grid-cols-2 max-w-4xl mx-auto"
-              : "md:grid-cols-2 lg:grid-cols-3"
-          }`}
-        >
-          {members.map((member) => (
-            <TeamMemberCard key={member._id} member={member} featured={featured} />
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function TeamMemberCard({
-  member,
-  featured,
-}: {
-  member: TeamMember;
-  featured?: boolean;
-}) {
-  const hasImage = member.photo || member.localImage;
-
-  return (
-    <Card className="border-0 shadow-lg overflow-hidden group">
-      <div className={`relative ${featured ? "h-72" : "h-56"}`}>
-        {hasImage ? (
-          <Image
-            src={member.localImage || urlFor(member.photo!).width(600).height(400).url()}
-            alt={member.name}
-            fill
-            className="object-cover transition-transform duration-300 group-hover:scale-105"
-          />
-        ) : (
-          <div className="absolute inset-0 bg-gradient-to-br from-purple/20 to-purple/40 flex items-center justify-center">
-            <span className="text-6xl text-purple/50">
-              {member.name.charAt(0)}
-            </span>
-          </div>
-        )}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-        <div className="absolute bottom-4 left-4 right-4">
-          <h3 className="text-xl font-semibold text-white mb-1">{member.name}</h3>
-          <p className="text-white/80">{member.function}</p>
-        </div>
-      </div>
-      <CardContent className="p-6">
-        {member.bio && (
-          <p className="text-text-secondary text-sm mb-4 line-clamp-3">
-            {member.bio}
-          </p>
-        )}
-
-        {member.koren && member.koren.length > 0 && (
-          <div className="flex items-center gap-2 mb-3">
-            <Music className="h-4 w-4 text-purple flex-shrink-0" />
-            <div className="flex flex-wrap gap-1">
-              {member.koren.map((koor) => (
-                <Link
-                  key={koor._id}
-                  href={`/koren/${koor.slug.current}`}
-                  className="text-xs bg-purple/10 text-purple px-2 py-1 rounded-full hover:bg-purple/20 transition-colors"
-                >
-                  {koor.name}
-                </Link>
-              ))}
-            </div>
-          </div>
-        )}
-
-        {member.email && (
-          <a
-            href={`mailto:${member.email}`}
-            className="inline-flex items-center text-purple text-sm hover:text-purple-dark transition-colors"
-          >
-            <Mail className="h-4 w-4 mr-2" />
-            {member.email}
-          </a>
-        )}
-      </CardContent>
-    </Card>
+    </div>
   );
 }
