@@ -47,86 +47,138 @@ export default async function Home() {
 
   return (
     <>
-      {/* Hero Section - Full width image with wave */}
-      <section className="relative">
-        {/* Full-width background image */}
-        <div className="relative min-h-[90vh] w-full">
-          <Image
-            src="/images/home1.jpg"
-            alt="Koor Fameus kinderen zingen samen"
-            fill
-            className="object-cover"
-            priority
-          />
-          {/* Gradient overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/80 to-transparent" />
+      {/* Hero Section - Centered with logo */}
+      <section className="relative bg-gradient-to-b from-purple/5 to-white py-16 md:py-24">
+        <div className="container mx-auto px-4 md:px-6 text-center">
+          {/* 3D Logo */}
+          <div className="mb-8">
+            <Image
+              src="/images/logo-3d.png"
+              alt="Koor Fameus Logo"
+              width={320}
+              height={320}
+              className="w-48 md:w-64 lg:w-80 h-auto mx-auto drop-shadow-xl"
+              priority
+            />
+          </div>
 
-          {/* Content */}
-          <div className="absolute inset-0 flex items-center">
-            <div className="container mx-auto px-4 md:px-6">
-              <div className="max-w-xl">
-                {/* 3D Logo */}
-                <div className="mb-8 flex justify-center lg:justify-start">
-                  <Image
-                    src="/images/logo-3d.png"
-                    alt="Koor Fameus Logo"
-                    width={320}
-                    height={320}
-                    className="w-48 md:w-64 lg:w-72 h-auto drop-shadow-xl"
-                    priority
-                  />
-                </div>
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-text-primary mb-6 leading-tight">
+            Ontdek de vreugde van{" "}
+            <span className="text-purple">samen zingen</span>
+          </h1>
 
-                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-text-primary mb-6 leading-tight">
-                  Ontdek de vreugde van{" "}
-                  <span className="text-purple">samen zingen</span>
-                </h1>
+          <p className="text-lg text-text-secondary mb-8 leading-relaxed max-w-2xl mx-auto">
+            {siteSettings?.tagline || "Koor Fameus is het kinderkoor van Landen waar muziek en plezier samenkomen. Voor kinderen van 4 tot 18 jaar."}
+          </p>
 
-                <p className="text-lg text-text-secondary mb-8 leading-relaxed">
-                  {siteSettings?.tagline || "Koor Fameus is het kinderkoor van Landen waar muziek en plezier samenkomen. Voor kinderen van 4 tot 18 jaar."}
-                </p>
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            <Button
+              asChild
+              size="lg"
+              className="bg-purple text-white hover:bg-purple-dark px-8 py-6 text-base rounded-full transition-colors font-semibold shadow-lg hover:shadow-xl"
+            >
+              <Link href="/koren">
+                Ontdek onze koren
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
+            <Button
+              asChild
+              variant="outline"
+              size="lg"
+              className="border-2 border-purple text-purple hover:bg-purple hover:text-white px-8 py-6 text-base rounded-full transition-colors font-semibold"
+            >
+              <Link href="/contact">
+                Gratis proefles
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </section>
 
-                {/* CTA Buttons */}
-                <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                  <Button
-                    asChild
-                    size="lg"
-                    className="bg-purple text-white hover:bg-purple-dark px-8 py-6 text-base rounded-full transition-colors font-semibold shadow-lg hover:shadow-xl"
-                  >
-                    <Link href="/koren">
-                      Ontdek onze koren
-                      <ArrowRight className="ml-2 h-5 w-5" />
-                    </Link>
-                  </Button>
-                  <Button
-                    asChild
-                    variant="outline"
-                    size="lg"
-                    className="border-2 border-purple text-purple hover:bg-purple hover:text-white px-8 py-6 text-base rounded-full transition-colors font-semibold bg-white/50 backdrop-blur-sm"
-                  >
-                    <Link href="/contact">
-                      Gratis proefles
-                    </Link>
-                  </Button>
-                </div>
-
-                <p className="text-sm text-text-muted">Vrijblijvend kennismaken? Dat kan!</p>
+      {/* Flowing sections with alternating photos */}
+      {/* Section 1: Photo RIGHT */}
+      <section className="relative bg-white overflow-hidden">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center py-16 md:py-24">
+            <div className="order-2 lg:order-1">
+              <p className="text-purple text-sm font-medium tracking-widest uppercase mb-3">Samen zingen</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-6">
+                Muziek verbindt
+              </h2>
+              <p className="text-lg text-text-secondary mb-6 leading-relaxed">
+                Bij Koor Fameus ontdekken kinderen de magie van samen zingen. Van kleuters tot tieners - iedereen is welkom om deel uit te maken van onze muzikale familie.
+              </p>
+              <Link href="/koren" className="inline-flex items-center text-purple font-semibold hover:text-purple-dark transition-colors group">
+                Bekijk onze koren
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </div>
+            <div className="order-1 lg:order-2 relative">
+              <div className="relative h-[300px] md:h-[400px] rounded-3xl overflow-hidden shadow-xl">
+                <Image
+                  src="/images/home1.jpg"
+                  alt="Kinderen zingen samen"
+                  fill
+                  className="object-cover"
+                />
               </div>
+              {/* Decorative blob */}
+              <div className="absolute -z-10 -top-8 -right-8 w-48 h-48 bg-purple/10 rounded-full blur-2xl" />
+              <div className="absolute -z-10 -bottom-8 -left-8 w-32 h-32 bg-orange/10 rounded-full blur-2xl" />
             </div>
           </div>
         </div>
 
-        {/* Wave divider at bottom of image */}
-        <div className="absolute bottom-0 left-0 right-0">
-          <svg viewBox="0 0 1440 150" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-auto" preserveAspectRatio="none">
-            <path d="M0 150L60 135C120 120 240 90 360 75C480 60 600 60 720 67.5C840 75 960 90 1080 97.5C1200 105 1320 105 1380 105L1440 105V150H1380C1320 150 1200 150 1080 150C960 150 840 150 720 150C600 150 480 150 360 150C240 150 120 150 60 150H0Z" fill="white"/>
-          </svg>
+        {/* Wave to next section */}
+        <svg viewBox="0 0 1440 100" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-auto -mb-1">
+          <path d="M0 100V60C240 20 480 0 720 0C960 0 1200 20 1440 60V100H0Z" className="fill-purple/5"/>
+        </svg>
+      </section>
+
+      {/* Section 2: Photo LEFT */}
+      <section className="relative bg-purple/5 overflow-hidden">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center py-16 md:py-24">
+            <div className="relative">
+              <div className="relative h-[300px] md:h-[400px] rounded-3xl overflow-hidden shadow-xl">
+                <Image
+                  src="/images/home2.jpg"
+                  alt="Optreden van het koor"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              {/* Decorative blob */}
+              <div className="absolute -z-10 -top-8 -left-8 w-48 h-48 bg-orange/10 rounded-full blur-2xl" />
+              <div className="absolute -z-10 -bottom-8 -right-8 w-32 h-32 bg-purple/10 rounded-full blur-2xl" />
+            </div>
+            <div>
+              <p className="text-purple text-sm font-medium tracking-widest uppercase mb-3">Optredens</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-6">
+                Schitter op het podium
+              </h2>
+              <p className="text-lg text-text-secondary mb-6 leading-relaxed">
+                Regelmatig staan onze koren op het podium. Van schoolfeesten tot concerten - onze zangers leren met trots hun talent te tonen.
+              </p>
+              <Link href="/evenementen" className="inline-flex items-center text-purple font-semibold hover:text-purple-dark transition-colors group">
+                Bekijk evenementen
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </div>
+          </div>
         </div>
+
+        {/* Wave to next section */}
+        <svg viewBox="0 0 1440 100" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-auto -mb-1">
+          <path d="M0 100V60C240 100 480 80 720 40C960 0 1200 20 1440 60V100H0Z" fill="white"/>
+        </svg>
       </section>
 
       {/* Koren Overview Section */}
       {koren && koren.length > 0 && (
-        <section className="py-20 md:py-28 bg-white relative pb-32">
+        <section className="py-16 md:py-24 bg-white relative overflow-hidden">
           <div className="container mx-auto px-4 md:px-6">
             <div className="text-center mb-14">
               <p className="text-purple text-sm font-medium tracking-widest uppercase mb-3">
@@ -160,97 +212,125 @@ export default async function Home() {
             </div>
           </div>
 
-          {/* Wave divider to next section */}
-          <div className="absolute bottom-0 left-0 right-0">
-            <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-auto">
-              <path d="M0 60L48 52.5C96 45 192 30 288 30C384 30 480 45 576 52.5C672 60 768 60 864 52.5C960 45 1056 30 1152 30C1248 30 1344 45 1392 52.5L1440 60V120H1392C1344 120 1248 120 1152 120C1056 120 960 120 864 120C768 120 672 120 576 120C480 120 384 120 288 120C192 120 96 120 48 120H0V60Z" className="fill-purple/5"/>
-            </svg>
-          </div>
+          {/* Wave to next section */}
+          <svg viewBox="0 0 1440 100" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-auto -mb-1 mt-16">
+            <path d="M0 100V40C360 80 720 100 1080 60C1260 40 1350 30 1440 40V100H0Z" className="fill-purple/5"/>
+          </svg>
         </section>
       )}
 
-      {/* Why Join Section */}
-      <section className="py-20 md:py-28 relative bg-gradient-to-br from-purple/5 via-purple/10 to-orange/5 overflow-hidden pb-32">
-        <div className="absolute top-20 left-10 w-64 h-64 bg-purple/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-10 right-20 w-48 h-48 bg-orange/10 rounded-full blur-3xl" />
-        <div className="container mx-auto px-4 md:px-6 relative z-10">
-          <div className="text-center mb-14">
-            <p className="text-purple text-sm font-medium tracking-widest uppercase mb-3">
-              Waarom Koor Fameus?
-            </p>
-            <h2 className="text-3xl md:text-4xl font-bold text-text-primary">
-              Meer dan alleen zingen
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <FeatureCard
-              icon={<Music className="h-6 w-6" />}
-              title="Zingen"
-              description="Wekelijks samen muziek maken"
-            />
-            <FeatureCard
-              icon={<Calendar className="h-6 w-6" />}
-              title="Optredens"
-              description="Schitter op het podium"
-            />
-            <FeatureCard
-              icon={<Users className="h-6 w-6" />}
-              title="Vrienden"
-              description="Maak nieuwe vrienden"
-            />
-            <FeatureCard
-              icon={<Music className="h-6 w-6" />}
-              title="Plezier"
-              description="Samen muziek beleven"
-            />
-          </div>
-        </div>
-
-        {/* Wave divider */}
-        <div className="absolute bottom-0 left-0 right-0">
-          <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-auto">
-            <path d="M0 40L60 45C120 50 240 60 360 65C480 70 600 70 720 62.5C840 55 960 40 1080 35C1200 30 1320 35 1380 37.5L1440 40V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0V40Z" fill="white"/>
-          </svg>
-        </div>
-      </section>
-
-      {/* Upcoming Events Section */}
-      {events && events.length > 0 && (
-        <section className="py-20 md:py-28 bg-white relative pb-32">
-          <div className="container mx-auto px-4 md:px-6">
-            <div className="text-center mb-14">
+      {/* Why Join Section - with photo RIGHT */}
+      <section className="relative bg-purple/5 overflow-hidden">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center py-16 md:py-24">
+            <div>
               <p className="text-purple text-sm font-medium tracking-widest uppercase mb-3">
-                Agenda
+                Waarom Koor Fameus?
               </p>
-              <h2 className="text-3xl md:text-4xl font-bold text-text-primary">
-                Aankomende evenementen
+              <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-6">
+                Meer dan alleen zingen
               </h2>
-            </div>
-
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 max-w-5xl mx-auto">
-              {events.slice(0, 3).map((event) => (
-                <EventCard key={event._id} event={event} />
-              ))}
-            </div>
-
-            <div className="text-center mt-12">
-              <Link
-                href="/evenementen"
-                className="inline-flex items-center text-purple font-semibold hover:text-purple-dark transition-colors group"
-              >
-                Bekijk alle evenementen
+              <div className="space-y-4 mb-6">
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 bg-purple/10 text-purple rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Music className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-text-primary">Zingen</h3>
+                    <p className="text-text-secondary text-sm">Wekelijks samen muziek maken</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 bg-purple/10 text-purple rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Users className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-text-primary">Vrienden</h3>
+                    <p className="text-text-secondary text-sm">Maak nieuwe vrienden voor het leven</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 bg-purple/10 text-purple rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Calendar className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-text-primary">Optredens</h3>
+                    <p className="text-text-secondary text-sm">Schitter op het podium</p>
+                  </div>
+                </div>
+              </div>
+              <Link href="/wie-zijn-wij" className="inline-flex items-center text-purple font-semibold hover:text-purple-dark transition-colors group">
+                Over ons team
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
+            <div className="relative">
+              <div className="relative h-[300px] md:h-[400px] rounded-3xl overflow-hidden shadow-xl">
+                <Image
+                  src="/images/wie1.jpg"
+                  alt="Ons team"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              {/* Decorative blob */}
+              <div className="absolute -z-10 -top-8 -right-8 w-48 h-48 bg-purple/10 rounded-full blur-2xl" />
+              <div className="absolute -z-10 -bottom-8 -left-8 w-32 h-32 bg-orange/10 rounded-full blur-2xl" />
+            </div>
+          </div>
+        </div>
+
+        {/* Wave to next section */}
+        <svg viewBox="0 0 1440 100" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-auto -mb-1">
+          <path d="M0 100V60C360 20 720 0 1080 40C1260 60 1350 70 1440 60V100H0Z" fill="white"/>
+        </svg>
+      </section>
+
+      {/* Upcoming Events Section - with photo LEFT */}
+      {events && events.length > 0 && (
+        <section className="relative bg-white overflow-hidden">
+          <div className="container mx-auto px-4 md:px-6">
+            <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center py-16 md:py-24">
+              <div className="relative">
+                <div className="relative h-[300px] md:h-[400px] rounded-3xl overflow-hidden shadow-xl">
+                  <Image
+                    src="/images/wie2.jpg"
+                    alt="Evenementen"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                {/* Decorative blob */}
+                <div className="absolute -z-10 -top-8 -left-8 w-48 h-48 bg-orange/10 rounded-full blur-2xl" />
+                <div className="absolute -z-10 -bottom-8 -right-8 w-32 h-32 bg-purple/10 rounded-full blur-2xl" />
+              </div>
+              <div>
+                <p className="text-purple text-sm font-medium tracking-widest uppercase mb-3">
+                  Agenda
+                </p>
+                <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-6">
+                  Aankomende evenementen
+                </h2>
+                <div className="space-y-4 mb-6">
+                  {events.slice(0, 3).map((event) => (
+                    <EventCard key={event._id} event={event} />
+                  ))}
+                </div>
+                <Link
+                  href="/evenementen"
+                  className="inline-flex items-center text-purple font-semibold hover:text-purple-dark transition-colors group"
+                >
+                  Bekijk alle evenementen
+                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </div>
+            </div>
           </div>
 
-          {/* Wave divider to CTA */}
-          <div className="absolute bottom-0 left-0 right-0">
-            <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-auto">
-              <path d="M0 80L48 72.5C96 65 192 50 288 45C384 40 480 45 576 55C672 65 768 80 864 82.5C960 85 1056 75 1152 65C1248 55 1344 45 1392 40L1440 35V120H1392C1344 120 1248 120 1152 120C1056 120 960 120 864 120C768 120 672 120 576 120C480 120 384 120 288 120C192 120 96 120 48 120H0V80Z" className="fill-purple"/>
-            </svg>
-          </div>
+          {/* Wave to CTA section */}
+          <svg viewBox="0 0 1440 100" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-auto -mb-1">
+            <path d="M0 100V40C240 80 480 100 720 60C960 20 1200 40 1440 80V100H0Z" className="fill-purple"/>
+          </svg>
         </section>
       )}
 
@@ -280,24 +360,6 @@ export default async function Home() {
         </div>
       </section>
     </>
-  );
-}
-
-function FeatureCard({ icon, title, description }: {
-  icon: React.ReactNode;
-  title: string;
-  description: string;
-}) {
-  return (
-    <Card className="border border-border/50 bg-white shadow-sm hover:shadow-md transition-shadow">
-      <CardContent className="p-6 text-center">
-        <div className="w-12 h-12 bg-purple/10 text-purple rounded-xl flex items-center justify-center mx-auto mb-4">
-          {icon}
-        </div>
-        <h3 className="text-lg font-semibold text-text-primary mb-2">{title}</h3>
-        <p className="text-text-secondary text-sm">{description}</p>
-      </CardContent>
-    </Card>
   );
 }
 
