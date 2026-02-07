@@ -47,93 +47,79 @@ export default async function Home() {
 
   return (
     <>
-      {/* Hero Section - Full width with wave */}
-      <section className="relative bg-gradient-to-br from-purple/5 via-white to-orange/5 overflow-hidden pb-32">
-        {/* Flowing background shapes */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute -top-40 -right-40 w-96 h-96 bg-purple/10 rounded-full blur-3xl" />
-          <div className="absolute top-1/2 -left-20 w-72 h-72 bg-orange/10 rounded-full blur-3xl" />
-        </div>
+      {/* Hero Section - Full width image with wave */}
+      <section className="relative">
+        {/* Full-width background image */}
+        <div className="relative min-h-[90vh] w-full">
+          <Image
+            src="/images/home1.jpg"
+            alt="Koor Fameus kinderen zingen samen"
+            fill
+            className="object-cover"
+            priority
+          />
+          {/* Gradient overlay */}
+          <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/80 to-transparent" />
 
-        <div className="container mx-auto px-4 md:px-6 relative">
-          <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[85vh] py-12">
-            {/* Left: Text Content */}
-            <div className="max-w-xl mx-auto lg:mx-0 text-center lg:text-left">
-              {/* 3D Logo - Centered */}
-              <div className="mb-8 flex justify-center">
-                <Image
-                  src="/images/logo-3d.png"
-                  alt="Koor Fameus Logo"
-                  width={320}
-                  height={320}
-                  className="w-56 md:w-72 lg:w-80 h-auto drop-shadow-xl"
-                  priority
-                />
-              </div>
+          {/* Content */}
+          <div className="absolute inset-0 flex items-center">
+            <div className="container mx-auto px-4 md:px-6">
+              <div className="max-w-xl">
+                {/* 3D Logo */}
+                <div className="mb-8 flex justify-center lg:justify-start">
+                  <Image
+                    src="/images/logo-3d.png"
+                    alt="Koor Fameus Logo"
+                    width={320}
+                    height={320}
+                    className="w-48 md:w-64 lg:w-72 h-auto drop-shadow-xl"
+                    priority
+                  />
+                </div>
 
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-text-primary mb-6 leading-tight text-center">
-                Ontdek de vreugde van{" "}
-                <span className="text-purple">samen zingen</span>
-              </h1>
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-text-primary mb-6 leading-tight">
+                  Ontdek de vreugde van{" "}
+                  <span className="text-purple">samen zingen</span>
+                </h1>
 
-              <p className="text-lg text-text-secondary mb-8 leading-relaxed">
-                {siteSettings?.tagline || "Koor Fameus is het kinderkoor van Landen waar muziek en plezier samenkomen. Voor kinderen van 4 tot 18 jaar."}
-              </p>
+                <p className="text-lg text-text-secondary mb-8 leading-relaxed">
+                  {siteSettings?.tagline || "Koor Fameus is het kinderkoor van Landen waar muziek en plezier samenkomen. Voor kinderen van 4 tot 18 jaar."}
+                </p>
 
-              {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 mb-8 justify-center lg:justify-start">
-                <Button
-                  asChild
-                  size="lg"
-                  className="bg-purple text-white hover:bg-purple-dark px-8 py-6 text-base rounded-full transition-colors font-semibold shadow-lg hover:shadow-xl"
-                >
-                  <Link href="/koren">
-                    Ontdek onze koren
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Link>
-                </Button>
-                <Button
-                  asChild
-                  variant="outline"
-                  size="lg"
-                  className="border-2 border-purple text-purple hover:bg-purple hover:text-white px-8 py-6 text-base rounded-full transition-colors font-semibold"
-                >
-                  <Link href="/contact">
-                    Gratis proefles
-                  </Link>
-                </Button>
-              </div>
+                {/* CTA Buttons */}
+                <div className="flex flex-col sm:flex-row gap-4 mb-8">
+                  <Button
+                    asChild
+                    size="lg"
+                    className="bg-purple text-white hover:bg-purple-dark px-8 py-6 text-base rounded-full transition-colors font-semibold shadow-lg hover:shadow-xl"
+                  >
+                    <Link href="/koren">
+                      Ontdek onze koren
+                      <ArrowRight className="ml-2 h-5 w-5" />
+                    </Link>
+                  </Button>
+                  <Button
+                    asChild
+                    variant="outline"
+                    size="lg"
+                    className="border-2 border-purple text-purple hover:bg-purple hover:text-white px-8 py-6 text-base rounded-full transition-colors font-semibold bg-white/50 backdrop-blur-sm"
+                  >
+                    <Link href="/contact">
+                      Gratis proefles
+                    </Link>
+                  </Button>
+                </div>
 
-              <p className="text-sm text-text-muted">Vrijblijvend kennismaken? Dat kan!</p>
-            </div>
-
-            {/* Right: Image with wave mask */}
-            <div className="relative h-[400px] lg:h-[600px]">
-              {/* Decorative background blob */}
-              <div className="absolute -inset-4 bg-gradient-to-br from-purple/30 to-orange/30 rounded-[40%_60%_70%_30%/40%_50%_60%_50%] blur-sm" />
-              {/* Image with curved mask */}
-              <div
-                className="absolute inset-0 overflow-hidden shadow-2xl"
-                style={{
-                  borderRadius: '40% 60% 70% 30% / 40% 50% 60% 50%',
-                }}
-              >
-                <Image
-                  src="/images/home1.jpg"
-                  alt="Koor Fameus kinderen zingen samen"
-                  fill
-                  className="object-cover hover:scale-105 transition-transform duration-700"
-                  priority
-                />
+                <p className="text-sm text-text-muted">Vrijblijvend kennismaken? Dat kan!</p>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Wave divider */}
+        {/* Wave divider at bottom of image */}
         <div className="absolute bottom-0 left-0 right-0">
-          <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-auto">
-            <path d="M0 120L60 105C120 90 240 60 360 45C480 30 600 30 720 37.5C840 45 960 60 1080 67.5C1200 75 1320 75 1380 75L1440 75V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z" fill="white"/>
+          <svg viewBox="0 0 1440 150" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-auto" preserveAspectRatio="none">
+            <path d="M0 150L60 135C120 120 240 90 360 75C480 60 600 60 720 67.5C840 75 960 90 1080 97.5C1200 105 1320 105 1380 105L1440 105V150H1380C1320 150 1200 150 1080 150C960 150 840 150 720 150C600 150 480 150 360 150C240 150 120 150 60 150H0Z" fill="white"/>
           </svg>
         </div>
       </section>
