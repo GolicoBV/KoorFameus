@@ -59,7 +59,7 @@ export default async function Home() {
             priority
           />
           {/* Elegant overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-purple/90 via-purple/70 to-purple/40" />
+          <div className="absolute inset-0 bg-gradient-to-r from-purple/70 via-purple/50 to-purple/20" />
         </div>
 
         <div className="container relative mx-auto px-4 md:px-6 py-16 md:py-24">
