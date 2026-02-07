@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -34,15 +33,9 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-bg-section bg-bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-bg-white/80">
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
-        {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 group">
-          <Image
-            src="/images/logo.png"
-            alt="Koor Fameus logo"
-            width={48}
-            height={48}
-            className="h-12 w-auto transition-transform duration-200 group-hover:scale-105"
-          />
+        {/* Site Title */}
+        <Link href="/" className="text-xl font-bold text-text-primary hover:text-purple transition-colors">
+          Koor Fameus
         </Link>
 
         {/* Desktop Navigation */}
@@ -72,14 +65,12 @@ export function Header() {
           <SheetContent side="right" className="w-72">
             <SheetTitle className="sr-only">Navigatie menu</SheetTitle>
             <div className="flex flex-col gap-4 mt-8">
-              <Link href="/" onClick={() => setIsOpen(false)}>
-                <Image
-                  src="/images/logo.png"
-                  alt="Koor Fameus"
-                  width={120}
-                  height={40}
-                  className="h-10 w-auto mb-4"
-                />
+              <Link
+                href="/"
+                onClick={() => setIsOpen(false)}
+                className="text-xl font-bold text-text-primary mb-4"
+              >
+                Koor Fameus
               </Link>
               <nav className="flex flex-col gap-1">
                 {navItems.map((item) => (
