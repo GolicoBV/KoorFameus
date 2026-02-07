@@ -51,7 +51,7 @@ export default async function Home() {
       <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
         <svg
           className="absolute top-0 left-0 w-full h-full"
-          viewBox="0 0 100 400"
+          viewBox="0 0 100 1000"
           preserveAspectRatio="none"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -59,37 +59,42 @@ export default async function Home() {
           {/* Glow effect */}
           <path
             d="M50 0
-               C15 50, 85 100, 50 150
-               C15 200, 85 250, 50 300
-               C15 350, 85 400, 50 400"
+               C10 80, 90 160, 50 240
+               C10 320, 90 400, 50 480
+               C10 560, 90 640, 50 720
+               C10 800, 90 880, 50 960
+               L50 1000"
             stroke="url(#gradient)"
-            strokeWidth="3"
+            strokeWidth="2"
             fill="none"
-            opacity="0.1"
+            opacity="0.08"
           />
           {/* Main flowing curve */}
           <path
             d="M50 0
-               C15 50, 85 100, 50 150
-               C15 200, 85 250, 50 300
-               C15 350, 85 400, 50 400"
+               C10 80, 90 160, 50 240
+               C10 320, 90 400, 50 480
+               C10 560, 90 640, 50 720
+               C10 800, 90 880, 50 960
+               L50 1000"
             stroke="url(#gradient)"
-            strokeWidth="0.4"
+            strokeWidth="0.3"
             fill="none"
-            opacity="0.6"
+            opacity="0.5"
           />
           {/* Music symbols along the curve */}
-          <text x="32" y="25" fontSize="6" fill="url(#gradient)" opacity="0.4">&#119070;</text>
-          <text x="70" y="75" fontSize="4" fill="url(#gradient)" opacity="0.3">&#9834;</text>
-          <text x="25" y="100" fontSize="5" fill="url(#gradient)" opacity="0.35">&#9835;</text>
-          <text x="80" y="130" fontSize="6" fill="url(#gradient)" opacity="0.4">&#119070;</text>
-          <text x="35" y="175" fontSize="4" fill="url(#gradient)" opacity="0.3">&#9833;</text>
-          <text x="72" y="200" fontSize="5" fill="url(#gradient)" opacity="0.35">&#9834;</text>
-          <text x="28" y="250" fontSize="6" fill="url(#gradient)" opacity="0.4">&#119070;</text>
-          <text x="75" y="275" fontSize="4" fill="url(#gradient)" opacity="0.3">&#9835;</text>
-          <text x="30" y="325" fontSize="5" fill="url(#gradient)" opacity="0.35">&#9834;</text>
-          <text x="68" y="360" fontSize="6" fill="url(#gradient)" opacity="0.4">&#119070;</text>
-          <text x="40" y="390" fontSize="4" fill="url(#gradient)" opacity="0.3">&#9833;</text>
+          <text x="30" y="60" fontSize="5" fill="url(#gradient)" opacity="0.35">&#119070;</text>
+          <text x="75" y="120" fontSize="3" fill="url(#gradient)" opacity="0.25">&#9834;</text>
+          <text x="22" y="200" fontSize="4" fill="url(#gradient)" opacity="0.3">&#9835;</text>
+          <text x="82" y="280" fontSize="5" fill="url(#gradient)" opacity="0.35">&#119070;</text>
+          <text x="28" y="360" fontSize="3" fill="url(#gradient)" opacity="0.25">&#9833;</text>
+          <text x="78" y="440" fontSize="4" fill="url(#gradient)" opacity="0.3">&#9834;</text>
+          <text x="25" y="520" fontSize="5" fill="url(#gradient)" opacity="0.35">&#119070;</text>
+          <text x="80" y="600" fontSize="3" fill="url(#gradient)" opacity="0.25">&#9835;</text>
+          <text x="30" y="680" fontSize="4" fill="url(#gradient)" opacity="0.3">&#9834;</text>
+          <text x="75" y="760" fontSize="5" fill="url(#gradient)" opacity="0.35">&#119070;</text>
+          <text x="28" y="840" fontSize="3" fill="url(#gradient)" opacity="0.25">&#9833;</text>
+          <text x="78" y="920" fontSize="4" fill="url(#gradient)" opacity="0.3">&#9834;</text>
           <defs>
             <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
               <stop offset="0%" stopColor="var(--color-purple)" />
