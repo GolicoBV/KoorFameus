@@ -160,7 +160,7 @@ export default async function Home() {
                 Schitter op het podium
               </h2>
               <p className="text-lg text-text-secondary mb-6 leading-relaxed">
-                Regelmatig staan onze koren op het podium. Van schoolfeesten tot concerten - onze zangers leren met trots hun talent te tonen.
+                Twee keer per jaar staan onze koren op het podium voor een concert. Een bijzonder moment waar onze zangers met trots hun talent tonen aan familie en vrienden.
               </p>
               <Link href="/evenementen" className="inline-flex items-center text-purple font-semibold hover:text-purple-dark transition-colors group">
                 Bekijk evenementen

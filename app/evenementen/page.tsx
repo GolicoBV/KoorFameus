@@ -133,7 +133,7 @@ export default async function EvenementenPage() {
                 Schitteren op het podium
               </h2>
               <p className="text-lg text-text-secondary leading-relaxed">
-                Regelmatig treden onze koren op bij lokale evenementen, feesten en speciale gelegenheden.
+                Twee keer per jaar organiseren we een concert waar onze zangers hun talent tonen aan familie en vrienden.
               </p>
             </div>
           </div>
