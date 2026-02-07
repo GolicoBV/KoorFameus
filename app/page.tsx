@@ -48,10 +48,10 @@ export default async function Home() {
   return (
     <div className="relative">
       {/* Hero Section - Centered with logo */}
-      <section className="relative py-16 md:py-24">
+      <section className="relative py-8 md:py-16">
         <div className="container mx-auto px-4 md:px-6 text-center">
           {/* 3D Logo */}
-          <div className="mb-8">
+          <div className="mb-4 md:mb-6">
             <Image
               src="/images/logo-3d-transparent.png"
               alt="Koor Fameus Logo"
