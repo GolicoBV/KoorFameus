@@ -47,43 +47,6 @@ export default async function Home() {
 
   return (
     <div className="relative">
-      {/* Flowing S-curve background with music symbols */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none z-0 h-full">
-        <svg
-          className="absolute top-0 left-0 w-full h-full"
-          viewBox="0 0 100 1000"
-          preserveAspectRatio="none"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          {/* Glow effect */}
-          <path
-            d="M50 0
-               C0 500, 100 500, 50 1000"
-            stroke="url(#gradient)"
-            strokeWidth="6"
-            fill="none"
-            opacity="0.05"
-          />
-          {/* Main flowing curve */}
-          <path
-            d="M50 0
-               C0 500, 100 500, 50 1000"
-            stroke="url(#gradient)"
-            strokeWidth="1"
-            fill="none"
-            opacity="0.25"
-          />
-          <defs>
-            <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" stopColor="var(--color-purple)" />
-              <stop offset="50%" stopColor="var(--color-orange)" />
-              <stop offset="100%" stopColor="var(--color-purple)" />
-            </linearGradient>
-          </defs>
-        </svg>
-      </div>
-
       {/* Hero Section - Centered with logo */}
       <section className="relative py-16 md:py-24">
         <div className="container mx-auto px-4 md:px-6 text-center">
