@@ -39,31 +39,60 @@ export default async function RootLayout({
       <body className="antialiased bg-background text-foreground min-h-screen flex flex-col relative">
         {/* Flowing S-curve background - starts from header */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none z-0 h-full">
+          {/* Mobile version - sharper curve */}
           <svg
-            className="absolute top-0 left-0 w-full h-full"
+            className="absolute top-0 left-0 w-full h-full md:hidden"
             viewBox="0 0 100 3000"
             preserveAspectRatio="none"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            {/* Glow effect */}
             <path
-              d="M50 0 C0 1500, 100 1500, 50 3000"
-              stroke="url(#layout-gradient)"
+              d="M50 0 C-30 1500, 130 1500, 50 3000"
+              stroke="url(#layout-gradient-mobile)"
               strokeWidth="6"
               fill="none"
               opacity="0.05"
             />
-            {/* Main flowing curve */}
             <path
-              d="M50 0 C0 1500, 100 1500, 50 3000"
-              stroke="url(#layout-gradient)"
+              d="M50 0 C-30 1500, 130 1500, 50 3000"
+              stroke="url(#layout-gradient-mobile)"
               strokeWidth="1"
               fill="none"
               opacity="0.25"
             />
             <defs>
-              <linearGradient id="layout-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+              <linearGradient id="layout-gradient-mobile" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stopColor="var(--color-purple)" />
+                <stop offset="50%" stopColor="var(--color-orange)" />
+                <stop offset="100%" stopColor="var(--color-purple)" />
+              </linearGradient>
+            </defs>
+          </svg>
+          {/* Desktop version - gentle curve */}
+          <svg
+            className="absolute top-0 left-0 w-full h-full hidden md:block"
+            viewBox="0 0 100 3000"
+            preserveAspectRatio="none"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M50 0 C0 1500, 100 1500, 50 3000"
+              stroke="url(#layout-gradient-desktop)"
+              strokeWidth="6"
+              fill="none"
+              opacity="0.05"
+            />
+            <path
+              d="M50 0 C0 1500, 100 1500, 50 3000"
+              stroke="url(#layout-gradient-desktop)"
+              strokeWidth="1"
+              fill="none"
+              opacity="0.25"
+            />
+            <defs>
+              <linearGradient id="layout-gradient-desktop" x1="0%" y1="0%" x2="0%" y2="100%">
                 <stop offset="0%" stopColor="var(--color-purple)" />
                 <stop offset="50%" stopColor="var(--color-orange)" />
                 <stop offset="100%" stopColor="var(--color-purple)" />
