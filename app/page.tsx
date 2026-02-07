@@ -48,7 +48,7 @@ export default async function Home() {
   return (
     <div className="relative">
       {/* Hero Section - Centered with logo */}
-      <section className="relative py-4 md:py-8">
+      <section className="relative py-2 md:py-4">
         <div className="container mx-auto px-4 md:px-6 text-center">
           {/* 3D Logo */}
           <div className="mb-2 md:mb-4">
@@ -57,7 +57,7 @@ export default async function Home() {
               alt="Koor Fameus Logo"
               width={400}
               height={400}
-              className="w-48 md:w-64 lg:w-80 h-auto mx-auto drop-shadow-xl relative z-10"
+              className="w-56 md:w-72 lg:w-96 h-auto mx-auto drop-shadow-xl relative z-10"
               priority
             />
           </div>
