@@ -47,77 +47,57 @@ export default async function Home() {
 
   return (
     <>
-      {/* Hero Section - Elegant & Musical */}
-      <section className="relative overflow-hidden min-h-[85vh] flex items-center">
-        {/* Full-width background image */}
-        <div className="absolute inset-0">
-          <Image
-            src="/images/home1.jpg"
-            alt="Koor Fameus"
-            fill
-            className="object-cover"
-            priority
-          />
-          {/* Elegant overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-purple/70 via-purple/50 to-purple/20" />
-        </div>
+      {/* Hero Section - Split Layout */}
+      <section className="bg-white">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[85vh] py-12">
+            {/* Left: Text Content */}
+            <div className="max-w-xl">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-text-primary mb-6 leading-tight">
+                Ontdek de vreugde van{" "}
+                <span className="text-purple">samen zingen</span>
+              </h1>
 
-        <div className="container relative mx-auto px-4 md:px-6 py-16 md:py-24">
-          <div className="max-w-2xl">
-            {/* Subtle label */}
-            <p className="text-purple-light/90 text-sm font-medium tracking-widest uppercase mb-4">
-              Kinderkoor Landen
-            </p>
+              <p className="text-lg text-text-secondary mb-8 leading-relaxed">
+                {siteSettings?.tagline || "Koor Fameus is het kinderkoor van Landen waar muziek en plezier samenkomen. Voor kinderen van 4 tot 18 jaar."}
+              </p>
 
-            {/* Main Heading */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-              Welkom bij{" "}
-              <span className="text-purple-light">Koor Fameus</span>
-            </h1>
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 mb-8">
+                <Button
+                  asChild
+                  size="lg"
+                  className="bg-purple text-white hover:bg-purple-dark px-8 py-6 text-base rounded-lg transition-colors font-semibold"
+                >
+                  <Link href="/koren">
+                    Ontdek onze koren
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Link>
+                </Button>
+                <Button
+                  asChild
+                  variant="outline"
+                  size="lg"
+                  className="border-2 border-purple text-purple hover:bg-purple hover:text-white px-8 py-6 text-base rounded-lg transition-colors font-semibold"
+                >
+                  <Link href="/contact">
+                    Gratis proefles
+                  </Link>
+                </Button>
+              </div>
 
-            {/* Subheading */}
-            <p className="text-xl text-white/90 mb-8 max-w-xl leading-relaxed">
-              {siteSettings?.tagline || "Waar jonge stemmen samenkomen. Drie koren voor kinderen van 4 tot 18 jaar."}
-            </p>
-
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button
-                asChild
-                size="lg"
-                className="bg-white text-purple hover:bg-purple-light hover:text-white px-8 py-6 text-base rounded-xl shadow-lg transition-all duration-300 font-semibold"
-              >
-                <Link href="/koren">
-                  Ontdek onze koren
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
-              <Button
-                asChild
-                variant="outline"
-                size="lg"
-                className="border-2 border-white/80 text-white hover:bg-white hover:text-purple px-8 py-6 text-base rounded-xl transition-all duration-300 font-semibold"
-              >
-                <Link href="/contact">
-                  Gratis proefles
-                </Link>
-              </Button>
+              <p className="text-sm text-text-muted">Vrijblijvend kennismaken? Dat kan!</p>
             </div>
 
-            {/* Stats - subtle */}
-            <div className="flex gap-12 mt-12 text-white/80">
-              <div>
-                <span className="block text-3xl font-bold text-white">100+</span>
-                <span className="text-sm">Leden</span>
-              </div>
-              <div>
-                <span className="block text-3xl font-bold text-white">3</span>
-                <span className="text-sm">Koren</span>
-              </div>
-              <div>
-                <span className="block text-3xl font-bold text-white">10+</span>
-                <span className="text-sm">Optredens/jaar</span>
-              </div>
+            {/* Right: Image */}
+            <div className="relative h-[400px] lg:h-[600px] rounded-2xl overflow-hidden shadow-lg">
+              <Image
+                src="/images/home1.jpg"
+                alt="Koor Fameus kinderen zingen samen"
+                fill
+                className="object-cover"
+                priority
+              />
             </div>
           </div>
         </div>

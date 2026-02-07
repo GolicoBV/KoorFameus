@@ -4,11 +4,16 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  /* Koor Fameus Color Palette - Elegant Purple & Orange */
-  --color-purple: oklch(0.606 0.25 292.717);
-  --color-purple-dark: oklch(0.541 0.281 293.009);
-  --color-purple-light: oklch(0.702 0.183 293.541);
-  --color-purple-50: oklch(0.969 0.016 293.756);
+  /* Koor Fameus Color Palette - Fresh Teal/Green */
+  --color-primary: oklch(0.696 0.146 166.361);
+  --color-primary-dark: oklch(0.600 0.140 166);
+  --color-primary-light: oklch(0.800 0.120 166);
+
+  /* Legacy purple (keep for compatibility) */
+  --color-purple: oklch(0.696 0.146 166.361);
+  --color-purple-dark: oklch(0.600 0.140 166);
+  --color-purple-light: oklch(0.800 0.120 166);
+  --color-purple-50: oklch(0.969 0.020 166);
 
   /* Orange accent color */
   --color-orange: oklch(0.705 0.213 47.604);
