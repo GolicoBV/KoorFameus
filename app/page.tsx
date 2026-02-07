@@ -47,9 +47,15 @@ export default async function Home() {
 
   return (
     <>
-      {/* Hero Section - Split Layout */}
-      <section className="bg-white">
-        <div className="container mx-auto px-4 md:px-6">
+      {/* Hero Section - Split Layout with flowing gradient */}
+      <section className="relative bg-gradient-to-br from-white via-purple-50/30 to-orange/5 overflow-hidden">
+        {/* Flowing background shapes */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute -top-40 -right-40 w-96 h-96 bg-purple/10 rounded-full blur-3xl" />
+          <div className="absolute top-1/2 -left-20 w-72 h-72 bg-orange/10 rounded-full blur-3xl" />
+          <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-purple/5 rounded-full blur-3xl" />
+        </div>
+        <div className="container mx-auto px-4 md:px-6 relative">
           <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[85vh] py-12">
             {/* Left: Text Content */}
             <div className="max-w-xl mx-auto lg:mx-0 text-center lg:text-left">
@@ -101,15 +107,18 @@ export default async function Home() {
               <p className="text-sm text-text-muted">Vrijblijvend kennismaken? Dat kan!</p>
             </div>
 
-            {/* Right: Image */}
-            <div className="relative h-[400px] lg:h-[600px] rounded-2xl overflow-hidden shadow-lg">
-              <Image
-                src="/images/home1.jpg"
-                alt="Koor Fameus kinderen zingen samen"
-                fill
-                className="object-cover"
-                priority
-              />
+            {/* Right: Image - Organic blob shape */}
+            <div className="relative h-[400px] lg:h-[600px]">
+              <div className="absolute inset-0 bg-gradient-to-br from-purple/20 to-orange/20 rounded-[60px_20px_50px_30px] lg:rounded-[80px_30px_70px_40px] rotate-2" />
+              <div className="absolute inset-2 overflow-hidden rounded-[50px_15px_40px_25px] lg:rounded-[70px_25px_60px_35px] shadow-xl">
+                <Image
+                  src="/images/home1.jpg"
+                  alt="Koor Fameus kinderen zingen samen"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -154,8 +163,10 @@ export default async function Home() {
       )}
 
       {/* Why Join Section */}
-      <section className="py-20 md:py-28 bg-bg-section">
-        <div className="container mx-auto px-4 md:px-6">
+      <section className="py-20 md:py-28 relative bg-gradient-to-tl from-purple/5 via-bg-section to-orange/5 overflow-hidden">
+        <div className="absolute top-20 left-10 w-64 h-64 bg-purple/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-10 right-20 w-48 h-48 bg-orange/10 rounded-full blur-3xl" />
+        <div className="container mx-auto px-4 md:px-6 relative">
           <div className="text-center mb-14">
             <p className="text-purple text-sm font-medium tracking-widest uppercase mb-3">
               Waarom Koor Fameus?
@@ -223,8 +234,10 @@ export default async function Home() {
       )}
 
       {/* CTA Section */}
-      <section className="py-20 md:py-28 bg-purple">
-        <div className="container mx-auto px-4 md:px-6 text-center">
+      <section className="py-20 md:py-28 bg-gradient-to-br from-purple via-purple-dark to-purple relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-orange/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+        <div className="absolute bottom-0 left-0 w-72 h-72 bg-white/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
+        <div className="container mx-auto px-4 md:px-6 text-center relative">
           <div className="max-w-2xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Probeer een gratis les
