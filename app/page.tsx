@@ -327,19 +327,20 @@ export default async function Home() {
             </div>
           </div>
 
-          {/* Wave to CTA section */}
-          <svg viewBox="0 0 1440 100" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-auto -mb-1">
-            <path d="M0 100V40C240 80 480 100 720 60C960 20 1200 40 1440 80V100H0Z" className="fill-purple"/>
-          </svg>
         </section>
       )}
 
-      {/* CTA Section */}
-      <section className="py-20 md:py-28 bg-gradient-to-br from-purple via-purple-dark to-purple relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-orange/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
-        <div className="absolute bottom-0 left-0 w-72 h-72 bg-white/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
-        <div className="container mx-auto px-4 md:px-6 text-center relative">
-          <div className="max-w-2xl mx-auto">
+      {/* CTA Section with integrated wave */}
+      <section className="relative overflow-hidden">
+        {/* Wave at top of section */}
+        <svg viewBox="0 0 1440 100" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-auto block">
+          <path d="M0 100V40C240 80 480 100 720 60C960 20 1200 40 1440 80V100H0Z" className="fill-purple"/>
+        </svg>
+        <div className="py-20 md:py-28 bg-gradient-to-br from-purple via-purple-dark to-purple -mt-1 relative">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-orange/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+          <div className="absolute bottom-0 left-0 w-72 h-72 bg-white/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
+          <div className="container mx-auto px-4 md:px-6 text-center relative">
+            <div className="max-w-2xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Probeer een gratis les
             </h2>
@@ -356,6 +357,7 @@ export default async function Home() {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
+            </div>
           </div>
         </div>
       </section>
