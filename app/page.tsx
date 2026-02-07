@@ -47,14 +47,14 @@ export default async function Home() {
 
   return (
     <>
-      {/* Hero Section - Split Layout with flowing gradient */}
-      <section className="relative bg-gradient-to-br from-white via-purple-50/30 to-orange/5 overflow-hidden">
+      {/* Hero Section - Full width with wave */}
+      <section className="relative bg-gradient-to-br from-purple/5 via-white to-orange/5 overflow-hidden pb-32">
         {/* Flowing background shapes */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute -top-40 -right-40 w-96 h-96 bg-purple/10 rounded-full blur-3xl" />
           <div className="absolute top-1/2 -left-20 w-72 h-72 bg-orange/10 rounded-full blur-3xl" />
-          <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-purple/5 rounded-full blur-3xl" />
         </div>
+
         <div className="container mx-auto px-4 md:px-6 relative">
           <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[85vh] py-12">
             {/* Left: Text Content */}
@@ -66,7 +66,7 @@ export default async function Home() {
                   alt="Koor Fameus Logo"
                   width={320}
                   height={320}
-                  className="w-56 md:w-72 lg:w-80 h-auto"
+                  className="w-56 md:w-72 lg:w-80 h-auto drop-shadow-xl"
                   priority
                 />
               </div>
@@ -85,7 +85,7 @@ export default async function Home() {
                 <Button
                   asChild
                   size="lg"
-                  className="bg-purple text-white hover:bg-purple-dark px-8 py-6 text-base rounded-lg transition-colors font-semibold"
+                  className="bg-purple text-white hover:bg-purple-dark px-8 py-6 text-base rounded-full transition-colors font-semibold shadow-lg hover:shadow-xl"
                 >
                   <Link href="/koren">
                     Ontdek onze koren
@@ -96,7 +96,7 @@ export default async function Home() {
                   asChild
                   variant="outline"
                   size="lg"
-                  className="border-2 border-purple text-purple hover:bg-purple hover:text-white px-8 py-6 text-base rounded-lg transition-colors font-semibold"
+                  className="border-2 border-purple text-purple hover:bg-purple hover:text-white px-8 py-6 text-base rounded-full transition-colors font-semibold"
                 >
                   <Link href="/contact">
                     Gratis proefles
@@ -107,26 +107,40 @@ export default async function Home() {
               <p className="text-sm text-text-muted">Vrijblijvend kennismaken? Dat kan!</p>
             </div>
 
-            {/* Right: Image - Organic blob shape */}
+            {/* Right: Image with wave mask */}
             <div className="relative h-[400px] lg:h-[600px]">
-              <div className="absolute inset-0 bg-gradient-to-br from-purple/20 to-orange/20 rounded-[60px_20px_50px_30px] lg:rounded-[80px_30px_70px_40px] rotate-2" />
-              <div className="absolute inset-2 overflow-hidden rounded-[50px_15px_40px_25px] lg:rounded-[70px_25px_60px_35px] shadow-xl">
+              {/* Decorative background blob */}
+              <div className="absolute -inset-4 bg-gradient-to-br from-purple/30 to-orange/30 rounded-[40%_60%_70%_30%/40%_50%_60%_50%] blur-sm" />
+              {/* Image with curved mask */}
+              <div
+                className="absolute inset-0 overflow-hidden shadow-2xl"
+                style={{
+                  borderRadius: '40% 60% 70% 30% / 40% 50% 60% 50%',
+                }}
+              >
                 <Image
                   src="/images/home1.jpg"
                   alt="Koor Fameus kinderen zingen samen"
                   fill
-                  className="object-cover"
+                  className="object-cover hover:scale-105 transition-transform duration-700"
                   priority
                 />
               </div>
             </div>
           </div>
         </div>
+
+        {/* Wave divider */}
+        <div className="absolute bottom-0 left-0 right-0">
+          <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-auto">
+            <path d="M0 120L60 105C120 90 240 60 360 45C480 30 600 30 720 37.5C840 45 960 60 1080 67.5C1200 75 1320 75 1380 75L1440 75V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z" fill="white"/>
+          </svg>
+        </div>
       </section>
 
       {/* Koren Overview Section */}
       {koren && koren.length > 0 && (
-        <section className="py-20 md:py-28 bg-white">
+        <section className="py-20 md:py-28 bg-white relative pb-32">
           <div className="container mx-auto px-4 md:px-6">
             <div className="text-center mb-14">
               <p className="text-purple text-sm font-medium tracking-widest uppercase mb-3">
@@ -150,7 +164,7 @@ export default async function Home() {
               <Button
                 asChild
                 size="lg"
-                className="bg-purple text-white hover:bg-purple-dark px-8 py-6 rounded-xl transition-colors"
+                className="bg-purple text-white hover:bg-purple-dark px-8 py-6 rounded-full transition-colors shadow-lg hover:shadow-xl"
               >
                 <Link href="/koren">
                   Bekijk alle koren
@@ -159,14 +173,21 @@ export default async function Home() {
               </Button>
             </div>
           </div>
+
+          {/* Wave divider to next section */}
+          <div className="absolute bottom-0 left-0 right-0">
+            <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-auto">
+              <path d="M0 60L48 52.5C96 45 192 30 288 30C384 30 480 45 576 52.5C672 60 768 60 864 52.5C960 45 1056 30 1152 30C1248 30 1344 45 1392 52.5L1440 60V120H1392C1344 120 1248 120 1152 120C1056 120 960 120 864 120C768 120 672 120 576 120C480 120 384 120 288 120C192 120 96 120 48 120H0V60Z" className="fill-purple/5"/>
+            </svg>
+          </div>
         </section>
       )}
 
       {/* Why Join Section */}
-      <section className="py-20 md:py-28 relative bg-gradient-to-tl from-purple/5 via-bg-section to-orange/5 overflow-hidden">
+      <section className="py-20 md:py-28 relative bg-gradient-to-br from-purple/5 via-purple/10 to-orange/5 overflow-hidden pb-32">
         <div className="absolute top-20 left-10 w-64 h-64 bg-purple/10 rounded-full blur-3xl" />
         <div className="absolute bottom-10 right-20 w-48 h-48 bg-orange/10 rounded-full blur-3xl" />
-        <div className="container mx-auto px-4 md:px-6 relative">
+        <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="text-center mb-14">
             <p className="text-purple text-sm font-medium tracking-widest uppercase mb-3">
               Waarom Koor Fameus?
@@ -199,11 +220,18 @@ export default async function Home() {
             />
           </div>
         </div>
+
+        {/* Wave divider */}
+        <div className="absolute bottom-0 left-0 right-0">
+          <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-auto">
+            <path d="M0 40L60 45C120 50 240 60 360 65C480 70 600 70 720 62.5C840 55 960 40 1080 35C1200 30 1320 35 1380 37.5L1440 40V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0V40Z" fill="white"/>
+          </svg>
+        </div>
       </section>
 
       {/* Upcoming Events Section */}
       {events && events.length > 0 && (
-        <section className="py-20 md:py-28 bg-white">
+        <section className="py-20 md:py-28 bg-white relative pb-32">
           <div className="container mx-auto px-4 md:px-6">
             <div className="text-center mb-14">
               <p className="text-purple text-sm font-medium tracking-widest uppercase mb-3">
@@ -229,6 +257,13 @@ export default async function Home() {
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
+          </div>
+
+          {/* Wave divider to CTA */}
+          <div className="absolute bottom-0 left-0 right-0">
+            <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-auto">
+              <path d="M0 80L48 72.5C96 65 192 50 288 45C384 40 480 45 576 55C672 65 768 80 864 82.5C960 85 1056 75 1152 65C1248 55 1344 45 1392 40L1440 35V120H1392C1344 120 1248 120 1152 120C1056 120 960 120 864 120C768 120 672 120 576 120C480 120 384 120 288 120C192 120 96 120 48 120H0V80Z" className="fill-purple"/>
+            </svg>
           </div>
         </section>
       )}
