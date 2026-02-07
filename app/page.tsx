@@ -96,11 +96,11 @@ export default async function Home() {
           {/* 3D Logo */}
           <div className="mb-8">
             <Image
-              src="/images/logo-3d-nobackground.png"
+              src="/images/logo-3d-transparent.png"
               alt="Koor Fameus Logo"
               width={320}
               height={320}
-              className="w-48 md:w-64 lg:w-80 h-auto mx-auto drop-shadow-xl relative z-10 mix-blend-multiply"
+              className="w-48 md:w-64 lg:w-80 h-auto mx-auto drop-shadow-xl relative z-10"
               priority
             />
           </div>
