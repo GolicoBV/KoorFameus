@@ -47,45 +47,49 @@ export default async function Home() {
 
   return (
     <div className="relative">
-      {/* Flowing S-curve background */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+      {/* Flowing S-curve background with music symbols */}
+      <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
         <svg
           className="absolute top-0 left-0 w-full h-full"
-          viewBox="0 0 100 1000"
+          viewBox="0 0 100 400"
           preserveAspectRatio="none"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
+          {/* Glow effect */}
+          <path
+            d="M50 0
+               C15 50, 85 100, 50 150
+               C15 200, 85 250, 50 300
+               C15 350, 85 400, 50 400"
+            stroke="url(#gradient)"
+            strokeWidth="8"
+            fill="none"
+            opacity="0.15"
+          />
           {/* Main flowing curve */}
           <path
             d="M50 0
-               C20 100, 80 150, 50 200
-               C20 250, 80 300, 50 350
-               C20 400, 80 450, 50 500
-               C20 550, 80 600, 50 650
-               C20 700, 80 750, 50 800
-               C20 850, 80 900, 50 950
-               L50 1000"
+               C15 50, 85 100, 50 150
+               C15 200, 85 250, 50 300
+               C15 350, 85 400, 50 400"
             stroke="url(#gradient)"
-            strokeWidth="0.3"
+            strokeWidth="1"
             fill="none"
-            opacity="0.4"
+            opacity="0.5"
           />
-          {/* Wider glow version */}
-          <path
-            d="M50 0
-               C20 100, 80 150, 50 200
-               C20 250, 80 300, 50 350
-               C20 400, 80 450, 50 500
-               C20 550, 80 600, 50 650
-               C20 700, 80 750, 50 800
-               C20 850, 80 900, 50 950
-               L50 1000"
-            stroke="url(#gradient)"
-            strokeWidth="2"
-            fill="none"
-            opacity="0.1"
-          />
+          {/* Music symbols along the curve */}
+          <text x="32" y="25" fontSize="6" fill="url(#gradient)" opacity="0.4">&#119070;</text>
+          <text x="70" y="75" fontSize="4" fill="url(#gradient)" opacity="0.3">&#9834;</text>
+          <text x="25" y="100" fontSize="5" fill="url(#gradient)" opacity="0.35">&#9835;</text>
+          <text x="80" y="130" fontSize="6" fill="url(#gradient)" opacity="0.4">&#119070;</text>
+          <text x="35" y="175" fontSize="4" fill="url(#gradient)" opacity="0.3">&#9833;</text>
+          <text x="72" y="200" fontSize="5" fill="url(#gradient)" opacity="0.35">&#9834;</text>
+          <text x="28" y="250" fontSize="6" fill="url(#gradient)" opacity="0.4">&#119070;</text>
+          <text x="75" y="275" fontSize="4" fill="url(#gradient)" opacity="0.3">&#9835;</text>
+          <text x="30" y="325" fontSize="5" fill="url(#gradient)" opacity="0.35">&#9834;</text>
+          <text x="68" y="360" fontSize="6" fill="url(#gradient)" opacity="0.4">&#119070;</text>
+          <text x="40" y="390" fontSize="4" fill="url(#gradient)" opacity="0.3">&#9833;</text>
           <defs>
             <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
               <stop offset="0%" stopColor="var(--color-purple)" />
