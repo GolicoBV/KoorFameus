@@ -59,12 +59,12 @@ export default async function Home() {
           <div className="absolute bottom-20 right-[25%] text-5xl animate-float delay-200 opacity-15">🎶</div>
 
           {/* Colorful Blobs */}
-          <div className="absolute -top-20 -left-20 w-96 h-96 bg-gradient-to-br from-coral/30 to-pink/20 rounded-full blur-3xl animate-pulse-soft" />
+          <div className="absolute -top-20 -left-20 w-96 h-96 bg-gradient-to-br from-purple/30 to-pink/20 rounded-full blur-3xl animate-pulse-soft" />
           <div className="absolute top-1/2 -right-32 w-80 h-80 bg-gradient-to-br from-purple/20 to-cyan/10 rounded-full blur-3xl animate-pulse-soft delay-500" />
-          <div className="absolute -bottom-20 left-1/3 w-72 h-72 bg-gradient-to-br from-yellow/20 to-coral/10 rounded-full blur-3xl animate-pulse-soft delay-300" />
+          <div className="absolute -bottom-20 left-1/3 w-72 h-72 bg-gradient-to-br from-yellow/20 to-purple/10 rounded-full blur-3xl animate-pulse-soft delay-300" />
 
           {/* Fun Shapes */}
-          <div className="absolute top-1/4 left-[5%] w-8 h-8 bg-coral rounded-full animate-bounce-gentle opacity-40" />
+          <div className="absolute top-1/4 left-[5%] w-8 h-8 bg-purple rounded-full animate-bounce-gentle opacity-40" />
           <div className="absolute top-1/3 right-[12%] w-6 h-6 bg-purple rounded-full animate-bounce-gentle delay-200 opacity-40" />
           <div className="absolute bottom-1/4 left-[15%] w-10 h-10 bg-yellow rounded-full animate-bounce-gentle delay-500 opacity-50" />
           <div className="absolute top-2/3 right-[20%] w-5 h-5 bg-cyan rounded-full animate-bounce-gentle delay-700 opacity-40" />
@@ -83,7 +83,7 @@ export default async function Home() {
               {/* Main Heading with Gradient */}
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-black mb-6 leading-tight">
                 <span className="block text-text-primary">Welkom bij</span>
-                <span className="text-gradient-coral inline-block animate-wiggle">Koor Fameus!</span>
+                <span className="text-gradient-purple inline-block animate-wiggle">Koor Fameus!</span>
               </h1>
 
               {/* Subheading */}
@@ -96,7 +96,7 @@ export default async function Home() {
                 <Button
                   asChild
                   size="lg"
-                  className="bg-gradient-to-r from-coral to-pink text-white px-8 py-7 text-lg rounded-2xl shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 font-bold"
+                  className="bg-gradient-to-r from-purple to-purple-dark text-white px-8 py-7 text-lg rounded-2xl shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 font-bold"
                 >
                   <Link href="/koren">
                     <Star className="mr-2 h-5 w-5" />
@@ -107,7 +107,7 @@ export default async function Home() {
                   asChild
                   variant="outline"
                   size="lg"
-                  className="border-3 border-coral text-coral hover:bg-coral hover:text-white px-8 py-7 text-lg rounded-2xl transition-all duration-300 font-bold bg-white/80 backdrop-blur-sm"
+                  className="border-3 border-purple text-purple hover:bg-purple hover:text-white px-8 py-7 text-lg rounded-2xl transition-all duration-300 font-bold bg-white/80 backdrop-blur-sm"
                 >
                   <Link href="/contact">
                     <Heart className="mr-2 h-5 w-5" />
@@ -118,7 +118,7 @@ export default async function Home() {
 
               {/* Fun Stats */}
               <div className="flex gap-8 mt-10 justify-center lg:justify-start">
-                <StatBubble number="100+" label="Leden" color="coral" />
+                <StatBubble number="100+" label="Leden" color="purple" />
                 <StatBubble number="3" label="Koren" color="purple" />
                 <StatBubble number="10+" label="Shows/jaar" color="cyan" />
               </div>
@@ -128,11 +128,11 @@ export default async function Home() {
             <div className="relative order-1 lg:order-2">
               <div className="relative w-full aspect-square max-w-lg mx-auto">
                 {/* Decorative rings */}
-                <div className="absolute inset-0 rounded-full border-4 border-dashed border-coral/20 animate-spin" style={{ animationDuration: '30s' }} />
+                <div className="absolute inset-0 rounded-full border-4 border-dashed border-purple/20 animate-spin" style={{ animationDuration: '30s' }} />
                 <div className="absolute inset-8 rounded-full border-4 border-dashed border-purple/20 animate-spin" style={{ animationDuration: '20s', animationDirection: 'reverse' }} />
 
                 {/* Main circle with content */}
-                <div className="absolute inset-16 bg-gradient-to-br from-coral via-pink to-purple rounded-full shadow-2xl flex items-center justify-center overflow-hidden">
+                <div className="absolute inset-16 bg-gradient-to-br from-purple via-purple-dark to-pink rounded-full shadow-2xl flex items-center justify-center overflow-hidden">
                   <div className="text-center text-white p-8">
                     <div className="text-8xl mb-4 animate-bounce-gentle">🎤</div>
                     <p className="text-2xl font-bold">Zingen is FUN!</p>
@@ -149,7 +149,7 @@ export default async function Home() {
                 <div className="absolute top-1/2 left-0 -translate-x-1/2 -translate-y-1/2 bg-purple text-2xl w-12 h-12 rounded-full flex items-center justify-center shadow-lg animate-float delay-500">
                   ⭐
                 </div>
-                <div className="absolute top-1/2 right-0 translate-x-1/2 -translate-y-1/2 bg-coral text-2xl w-14 h-14 rounded-full flex items-center justify-center shadow-lg animate-float delay-700">
+                <div className="absolute top-1/2 right-0 translate-x-1/2 -translate-y-1/2 bg-purple text-2xl w-14 h-14 rounded-full flex items-center justify-center shadow-lg animate-float delay-700">
                   💜
                 </div>
               </div>
@@ -169,16 +169,16 @@ export default async function Home() {
       {koren && koren.length > 0 && (
         <section className="py-20 md:py-32 bg-white relative overflow-hidden">
           {/* Background decoration */}
-          <div className="absolute top-20 right-0 text-9xl opacity-5 font-black text-coral">ZING</div>
+          <div className="absolute top-20 right-0 text-9xl opacity-5 font-black text-purple">ZING</div>
           <div className="absolute bottom-20 left-0 text-9xl opacity-5 font-black text-purple">MEE!</div>
 
           <div className="container mx-auto px-4 md:px-6">
             <div className="text-center mb-16">
-              <span className="inline-block bg-coral/10 text-coral px-4 py-2 rounded-full text-sm font-bold mb-4">
+              <span className="inline-block bg-purple/10 text-purple px-4 py-2 rounded-full text-sm font-bold mb-4">
                 ✨ Voor elke leeftijd
               </span>
               <h2 className="text-4xl md:text-5xl font-black text-text-primary mb-6">
-                Ontdek jouw <span className="text-gradient-coral">koor!</span>
+                Ontdek jouw <span className="text-gradient-purple">koor!</span>
               </h2>
               <p className="text-xl text-text-secondary max-w-2xl mx-auto">
                 Van kleuters tot tieners - er is een koor dat perfect bij jou past.
@@ -225,7 +225,7 @@ export default async function Home() {
               emoji="🎤"
               title="Zingen!"
               description="Wekelijks samen muziek maken"
-              color="coral"
+              color="purple"
             />
             <FunFeatureCard
               emoji="🎭"
@@ -258,7 +258,7 @@ export default async function Home() {
                 📅 Binnenkort
               </span>
               <h2 className="text-4xl md:text-5xl font-black text-text-primary mb-6">
-                Aankomende <span className="text-gradient-coral">events</span>
+                Aankomende <span className="text-gradient-purple">events</span>
               </h2>
             </div>
 
@@ -271,7 +271,7 @@ export default async function Home() {
             <div className="text-center mt-12">
               <Link
                 href="/evenementen"
-                className="inline-flex items-center text-coral font-bold text-lg hover:text-coral-dark transition-colors group"
+                className="inline-flex items-center text-purple font-bold text-lg hover:text-purple-dark transition-colors group"
               >
                 Bekijk alle evenementen
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-2 transition-transform" />
@@ -284,7 +284,7 @@ export default async function Home() {
       {/* CTA Section - Creative */}
       <section className="relative py-24 md:py-32 overflow-hidden">
         {/* Gradient background */}
-        <div className="absolute inset-0 bg-gradient-to-r from-coral via-pink to-purple animate-gradient" />
+        <div className="absolute inset-0 bg-gradient-to-r from-purple via-purple-dark to-pink animate-gradient" />
 
         {/* Floating elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -306,7 +306,7 @@ export default async function Home() {
             <Button
               asChild
               size="lg"
-              className="bg-white text-coral hover:bg-yellow hover:text-text-primary px-12 py-8 text-xl rounded-2xl shadow-2xl hover:shadow-3xl hover:scale-105 transition-all duration-300 font-black"
+              className="bg-white text-purple hover:bg-yellow hover:text-text-primary px-12 py-8 text-xl rounded-2xl shadow-2xl hover:shadow-3xl hover:scale-105 transition-all duration-300 font-black"
             >
               <Link href="/contact">
                 <Star className="mr-3 h-6 w-6" />
@@ -322,14 +322,14 @@ export default async function Home() {
 
 function StatBubble({ number, label, color }: { number: string; label: string; color: string }) {
   const bgColors: Record<string, string> = {
-    coral: "bg-coral/10",
     purple: "bg-purple/10",
+    orange: "bg-orange/10",
     cyan: "bg-cyan/10",
     yellow: "bg-yellow/10",
   };
   const textColors: Record<string, string> = {
-    coral: "text-coral",
     purple: "text-purple",
+    orange: "text-orange",
     cyan: "text-cyan",
     yellow: "text-yellow-600",
   };
@@ -349,8 +349,8 @@ function FunFeatureCard({ emoji, title, description, color }: {
   color: string;
 }) {
   const bgColors: Record<string, string> = {
-    coral: "bg-coral",
     purple: "bg-purple",
+    orange: "bg-orange",
     cyan: "bg-cyan",
     yellow: "bg-yellow",
   };
@@ -370,9 +370,9 @@ function FunFeatureCard({ emoji, title, description, color }: {
 
 function KoorCard({ koor, index }: { koor: Koor; index: number }) {
   const gradients = [
-    "from-coral to-pink",
-    "from-purple to-cyan",
-    "from-cyan to-green",
+    "from-purple to-purple-dark",
+    "from-purple-dark to-pink",
+    "from-cyan to-purple",
   ];
   const gradient = gradients[index % gradients.length];
 
@@ -409,7 +409,7 @@ function KoorCard({ koor, index }: { koor: Koor; index: number }) {
         </div>
 
         <CardContent className="p-6">
-          <h3 className="text-2xl font-bold text-text-primary mb-3 group-hover:text-coral transition-colors">
+          <h3 className="text-2xl font-bold text-text-primary mb-3 group-hover:text-purple transition-colors">
             {koor.name}
           </h3>
           {koor.shortDescription && (
@@ -417,7 +417,7 @@ function KoorCard({ koor, index }: { koor: Koor; index: number }) {
               {koor.shortDescription}
             </p>
           )}
-          <div className="flex items-center text-coral font-bold">
+          <div className="flex items-center text-purple font-bold">
             Ontdek meer
             <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-2 transition-transform" />
           </div>
@@ -435,7 +435,7 @@ function EventCard({ event }: { event: Event }) {
       <CardContent className="p-6">
         <div className="flex items-start gap-4">
           {/* Date bubble */}
-          <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-coral to-pink rounded-2xl flex flex-col items-center justify-center text-white shadow-lg group-hover:scale-110 transition-transform">
+          <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-purple to-purple-dark rounded-2xl flex flex-col items-center justify-center text-white shadow-lg group-hover:scale-110 transition-transform">
             <span className="font-black text-2xl leading-none">
               {eventDate.getDate()}
             </span>
@@ -445,7 +445,7 @@ function EventCard({ event }: { event: Event }) {
           </div>
 
           <div className="flex-1 min-w-0">
-            <h3 className="font-bold text-lg text-text-primary mb-1 group-hover:text-coral transition-colors">
+            <h3 className="font-bold text-lg text-text-primary mb-1 group-hover:text-purple transition-colors">
               {event.title}
             </h3>
             {event.location && (
