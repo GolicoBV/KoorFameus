@@ -38,7 +38,7 @@ export default async function RootLayout({
     <html lang="nl" className={quicksand.className}>
       <body className="antialiased bg-background text-foreground min-h-screen flex flex-col relative">
         {/* Flowing S-curve background - starts from header */}
-        <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
+        <div className="absolute inset-0 overflow-hidden pointer-events-none z-0 h-full">
           <svg
             className="absolute top-0 left-0 w-full h-full"
             viewBox="0 0 100 1000"
