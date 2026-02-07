@@ -63,7 +63,7 @@ export default async function Home() {
             stroke="url(#gradient)"
             strokeWidth="6"
             fill="none"
-            opacity="0.1"
+            opacity="0.05"
           />
           {/* Main flowing curve */}
           <path
@@ -72,7 +72,7 @@ export default async function Home() {
             stroke="url(#gradient)"
             strokeWidth="1"
             fill="none"
-            opacity="0.5"
+            opacity="0.25"
           />
           <defs>
             <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
@@ -153,7 +153,7 @@ export default async function Home() {
               </Link>
             </div>
             <div className="order-1 lg:order-2 relative">
-              <div className="relative h-[300px] md:h-[400px] rounded-3xl overflow-hidden shadow-xl">
+              <div className="relative h-[300px] md:h-[400px] overflow-hidden shadow-xl" style={{ clipPath: 'polygon(15% 0, 100% 0, 100% 100%, 15% 100%, 0% 75%, 5% 50%, 0% 25%)' }}>
                 <Image
                   src="/images/home1.jpg"
                   alt="Kinderen zingen samen"
@@ -179,7 +179,7 @@ export default async function Home() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center py-16 md:py-24">
             <div className="relative">
-              <div className="relative h-[300px] md:h-[400px] rounded-3xl overflow-hidden shadow-xl">
+              <div className="relative h-[300px] md:h-[400px] overflow-hidden shadow-xl" style={{ clipPath: 'polygon(0 0, 85% 0, 100% 25%, 95% 50%, 100% 75%, 85% 100%, 0 100%)' }}>
                 <Image
                   src="/images/home2.jpg"
                   alt="Optreden van het koor"
@@ -302,7 +302,7 @@ export default async function Home() {
               </Link>
             </div>
             <div className="relative">
-              <div className="relative h-[300px] md:h-[400px] rounded-3xl overflow-hidden shadow-xl">
+              <div className="relative h-[300px] md:h-[400px] overflow-hidden shadow-xl" style={{ clipPath: 'polygon(15% 0, 100% 0, 100% 100%, 15% 100%, 0% 75%, 5% 50%, 0% 25%)' }}>
                 <Image
                   src="/images/wie1.jpg"
                   alt="Ons team"
@@ -329,7 +329,7 @@ export default async function Home() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center py-16 md:py-24">
               <div className="relative">
-                <div className="relative h-[300px] md:h-[400px] rounded-3xl overflow-hidden shadow-xl">
+                <div className="relative h-[300px] md:h-[400px] overflow-hidden shadow-xl" style={{ clipPath: 'polygon(0 0, 85% 0, 100% 25%, 95% 50%, 100% 75%, 85% 100%, 0 100%)' }}>
                   <Image
                     src="/images/wie2.jpg"
                     alt="Evenementen"
