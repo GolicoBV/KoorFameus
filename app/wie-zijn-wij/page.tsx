@@ -22,13 +22,75 @@ interface TeamMember {
       _ref: string;
     };
   };
+  localImage?: string;
   bio?: string;
   email?: string;
   koren?: { _id: string; name: string; slug: { current: string } }[];
 }
 
+// Static team data with local images
+const staticTeamMembers: TeamMember[] = [
+  // Dirigenten
+  {
+    _id: "dirigent-lief",
+    name: "Lief",
+    role: "dirigent",
+    function: "Dirigent",
+    localImage: "/images/dirigent_lief.jpg",
+  },
+  {
+    _id: "dirigent-freya",
+    name: "Freya",
+    role: "dirigent",
+    function: "Dirigent",
+    localImage: "/images/dirigent_freya.jpg",
+  },
+  {
+    _id: "dirigent-karolien",
+    name: "Karolien",
+    role: "dirigent",
+    function: "Dirigent",
+    localImage: "/images/dirigent_karolien.jpg",
+  },
+  // Bestuur
+  {
+    _id: "bestuur-adriaan",
+    name: "Adriaan",
+    role: "bestuur",
+    function: "Bestuurslid",
+    localImage: "/images/bestuur_adriaan.png",
+  },
+  {
+    _id: "bestuur-ellen",
+    name: "Ellen",
+    role: "bestuur",
+    function: "Bestuurslid",
+    localImage: "/images/bestuur_ellen.jpg",
+  },
+  {
+    _id: "bestuur-inge",
+    name: "Inge",
+    role: "bestuur",
+    function: "Bestuurslid",
+    localImage: "/images/bestuur_inge.jpg",
+  },
+  {
+    _id: "bestuur-linda",
+    name: "Linda",
+    role: "bestuur",
+    function: "Bestuurslid",
+    localImage: "/images/bestuur_linda.jpg",
+  },
+];
+
 async function getTeamMembers() {
-  return client.fetch<TeamMember[]>(teamMembersQuery);
+  try {
+    const cmsMembers = await client.fetch<TeamMember[]>(teamMembersQuery);
+    // Use CMS data if available, otherwise use static data
+    return cmsMembers && cmsMembers.length > 0 ? cmsMembers : staticTeamMembers;
+  } catch {
+    return staticTeamMembers;
+  }
 }
 
 export default async function WieZijnWijPage() {
@@ -165,12 +227,14 @@ function TeamMemberCard({
   member: TeamMember;
   featured?: boolean;
 }) {
+  const hasImage = member.photo || member.localImage;
+
   return (
     <Card className="border-0 shadow-lg overflow-hidden group">
       <div className={`relative ${featured ? "h-72" : "h-56"}`}>
-        {member.photo ? (
+        {hasImage ? (
           <Image
-            src={urlFor(member.photo).width(600).height(400).url()}
+            src={member.localImage || urlFor(member.photo!).width(600).height(400).url()}
             alt={member.name}
             fill
             className="object-cover transition-transform duration-300 group-hover:scale-105"
