@@ -55,9 +55,9 @@ export default async function Home() {
             <Image
               src="/images/logo-3d-transparent.png"
               alt="Koor Fameus Logo"
-              width={320}
-              height={320}
-              className="w-48 md:w-64 lg:w-80 h-auto mx-auto drop-shadow-xl relative z-10"
+              width={400}
+              height={400}
+              className="w-56 md:w-72 lg:w-96 h-auto mx-auto drop-shadow-xl relative z-10"
               priority
             />
           </div>
