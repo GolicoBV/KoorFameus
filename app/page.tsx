@@ -46,7 +46,56 @@ export default async function Home() {
   const { koren, events, siteSettings } = await getHomePageData();
 
   return (
-    <>
+    <div className="relative">
+      {/* Flowing S-curve background */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <svg
+          className="absolute top-0 left-0 w-full h-full"
+          viewBox="0 0 100 1000"
+          preserveAspectRatio="none"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          {/* Main flowing curve */}
+          <path
+            d="M50 0
+               C20 100, 80 150, 50 200
+               C20 250, 80 300, 50 350
+               C20 400, 80 450, 50 500
+               C20 550, 80 600, 50 650
+               C20 700, 80 750, 50 800
+               C20 850, 80 900, 50 950
+               L50 1000"
+            stroke="url(#gradient)"
+            strokeWidth="0.3"
+            fill="none"
+            opacity="0.4"
+          />
+          {/* Wider glow version */}
+          <path
+            d="M50 0
+               C20 100, 80 150, 50 200
+               C20 250, 80 300, 50 350
+               C20 400, 80 450, 50 500
+               C20 550, 80 600, 50 650
+               C20 700, 80 750, 50 800
+               C20 850, 80 900, 50 950
+               L50 1000"
+            stroke="url(#gradient)"
+            strokeWidth="2"
+            fill="none"
+            opacity="0.1"
+          />
+          <defs>
+            <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stopColor="var(--color-purple)" />
+              <stop offset="50%" stopColor="var(--color-orange)" />
+              <stop offset="100%" stopColor="var(--color-purple)" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+
       {/* Hero Section - Centered with logo */}
       <section className="relative bg-gradient-to-b from-purple/5 to-white py-16 md:py-24">
         <div className="container mx-auto px-4 md:px-6 text-center">
@@ -57,7 +106,7 @@ export default async function Home() {
               alt="Koor Fameus Logo"
               width={320}
               height={320}
-              className="w-48 md:w-64 lg:w-80 h-auto mx-auto drop-shadow-xl"
+              className="w-48 md:w-64 lg:w-80 h-auto mx-auto drop-shadow-xl mix-blend-multiply"
               priority
             />
           </div>
@@ -359,7 +408,7 @@ export default async function Home() {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }
 
