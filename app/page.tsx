@@ -63,9 +63,9 @@ export default async function Home() {
                C15 200, 85 250, 50 300
                C15 350, 85 400, 50 400"
             stroke="url(#gradient)"
-            strokeWidth="8"
+            strokeWidth="3"
             fill="none"
-            opacity="0.15"
+            opacity="0.1"
           />
           {/* Main flowing curve */}
           <path
@@ -74,9 +74,9 @@ export default async function Home() {
                C15 200, 85 250, 50 300
                C15 350, 85 400, 50 400"
             stroke="url(#gradient)"
-            strokeWidth="1"
+            strokeWidth="0.4"
             fill="none"
-            opacity="0.5"
+            opacity="0.6"
           />
           {/* Music symbols along the curve */}
           <text x="32" y="25" fontSize="6" fill="url(#gradient)" opacity="0.4">&#119070;</text>
