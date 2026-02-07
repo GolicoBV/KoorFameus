@@ -48,26 +48,26 @@ export default async function Home() {
   return (
     <div className="relative">
       {/* Hero Section - Centered with logo */}
-      <section className="relative py-8 md:py-16">
+      <section className="relative py-4 md:py-8">
         <div className="container mx-auto px-4 md:px-6 text-center">
           {/* 3D Logo */}
-          <div className="mb-4 md:mb-6">
+          <div className="mb-2 md:mb-4">
             <Image
               src="/images/logo-3d-transparent.png"
               alt="Koor Fameus Logo"
               width={400}
               height={400}
-              className="w-56 md:w-72 lg:w-96 h-auto mx-auto drop-shadow-xl relative z-10"
+              className="w-48 md:w-64 lg:w-80 h-auto mx-auto drop-shadow-xl relative z-10"
               priority
             />
           </div>
 
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-text-primary mb-6 leading-tight">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-text-primary mb-4 leading-tight">
             Ontdek de vreugde van{" "}
             <span className="text-purple">samen zingen</span>
           </h1>
 
-          <p className="text-lg text-text-secondary mb-8 leading-relaxed max-w-2xl mx-auto">
+          <p className="text-lg text-text-secondary mb-6 leading-relaxed max-w-2xl mx-auto">
             {siteSettings?.tagline || "Koor Fameus is het kinderkoor van Landen waar muziek en plezier samenkomen. Voor kinderen van 4 tot 18 jaar."}
           </p>
 
