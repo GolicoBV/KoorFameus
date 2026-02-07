@@ -52,9 +52,9 @@ export default async function Home() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[85vh] py-12">
             {/* Left: Text Content */}
-            <div className="max-w-xl">
+            <div className="max-w-xl mx-auto lg:mx-0 text-center lg:text-left">
               {/* 3D Logo - Centered */}
-              <div className="mb-8 flex justify-center lg:justify-start">
+              <div className="mb-8 flex justify-center">
                 <Image
                   src="/images/logo-3d.png"
                   alt="Koor Fameus Logo"
@@ -65,7 +65,7 @@ export default async function Home() {
                 />
               </div>
 
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-text-primary mb-6 leading-tight text-center lg:text-left">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-text-primary mb-6 leading-tight text-center">
                 Ontdek de vreugde van{" "}
                 <span className="text-purple">samen zingen</span>
               </h1>
@@ -75,7 +75,7 @@ export default async function Home() {
               </p>
 
               {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 mb-8">
+              <div className="flex flex-col sm:flex-row gap-4 mb-8 justify-center lg:justify-start">
                 <Button
                   asChild
                   size="lg"
