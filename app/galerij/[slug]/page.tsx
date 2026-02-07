@@ -55,7 +55,7 @@ export default function GalleryAlbumPage() {
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <div className="animate-spin rounded-full h-12 w-12 border-4 border-coral border-t-transparent" />
+        <div className="animate-spin rounded-full h-12 w-12 border-4 border-purple border-t-transparent" />
       </div>
     );
   }
@@ -96,7 +96,7 @@ export default function GalleryAlbumPage() {
         <div className="container mx-auto px-4 md:px-6">
           <Link
             href="/galerij"
-            className="inline-flex items-center text-text-secondary hover:text-coral mb-4 transition-colors"
+            className="inline-flex items-center text-text-secondary hover:text-purple mb-4 transition-colors"
           >
             <ArrowLeft className="mr-2 h-4 w-4" />
             Terug naar galerij
@@ -131,7 +131,7 @@ export default function GalleryAlbumPage() {
                 <button
                   key={index}
                   onClick={() => openLightbox(index)}
-                  className="relative aspect-square overflow-hidden rounded-lg group focus:outline-none focus:ring-2 focus:ring-coral"
+                  className="relative aspect-square overflow-hidden rounded-lg group focus:outline-none focus:ring-2 focus:ring-purple"
                 >
                   <Image
                     src={urlFor(image).width(400).height(400).url()}

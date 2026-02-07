@@ -88,7 +88,7 @@ export default function PrivacyPage() {
               <p>
                 Heb je vragen over dit privacybeleid of wil je een van je rechten uitoefenen?
                 Neem dan contact met ons op via{" "}
-                <a href="mailto:info@koorfameus.be" className="text-coral hover:text-coral-dark">
+                <a href="mailto:info@koorfameus.be" className="text-purple hover:text-purple-dark">
                   info@koorfameus.be
                 </a>.
               </p>

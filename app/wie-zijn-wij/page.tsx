@@ -49,7 +49,7 @@ export default async function WieZijnWijPage() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center max-w-3xl mx-auto">
             <h1 className="text-4xl font-bold text-text-primary md:text-5xl mb-4">
-              Wie Zijn <span className="text-coral">Wij</span>
+              Wie Zijn <span className="text-purple">Wij</span>
             </h1>
             <p className="text-lg text-text-secondary">
               Maak kennis met het gepassioneerde team achter Koor Fameus.
@@ -98,7 +98,7 @@ export default async function WieZijnWijPage() {
       )}
 
       {/* CTA Section */}
-      <section className="py-16 md:py-24 bg-coral">
+      <section className="py-16 md:py-24 bg-purple">
         <div className="container mx-auto px-4 md:px-6 text-center">
           <h2 className="text-3xl font-bold text-white md:text-4xl mb-4">
             Wil je ons team versterken?
@@ -109,7 +109,7 @@ export default async function WieZijnWijPage() {
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center bg-white text-coral hover:bg-gray-100 px-8 py-4 text-lg font-medium rounded-xl shadow-md hover:shadow-lg transition-all duration-200"
+            className="inline-flex items-center justify-center bg-white text-purple hover:bg-gray-100 px-8 py-4 text-lg font-medium rounded-xl shadow-md hover:shadow-lg transition-all duration-200"
           >
             Neem contact op
           </Link>
@@ -176,8 +176,8 @@ function TeamMemberCard({
             className="object-cover transition-transform duration-300 group-hover:scale-105"
           />
         ) : (
-          <div className="absolute inset-0 bg-gradient-to-br from-coral/20 to-coral/40 flex items-center justify-center">
-            <span className="text-6xl text-coral/50">
+          <div className="absolute inset-0 bg-gradient-to-br from-purple/20 to-purple/40 flex items-center justify-center">
+            <span className="text-6xl text-purple/50">
               {member.name.charAt(0)}
             </span>
           </div>
@@ -197,13 +197,13 @@ function TeamMemberCard({
 
         {member.koren && member.koren.length > 0 && (
           <div className="flex items-center gap-2 mb-3">
-            <Music className="h-4 w-4 text-coral flex-shrink-0" />
+            <Music className="h-4 w-4 text-purple flex-shrink-0" />
             <div className="flex flex-wrap gap-1">
               {member.koren.map((koor) => (
                 <Link
                   key={koor._id}
                   href={`/koren/${koor.slug.current}`}
-                  className="text-xs bg-coral/10 text-coral px-2 py-1 rounded-full hover:bg-coral/20 transition-colors"
+                  className="text-xs bg-purple/10 text-purple px-2 py-1 rounded-full hover:bg-purple/20 transition-colors"
                 >
                   {koor.name}
                 </Link>
@@ -215,7 +215,7 @@ function TeamMemberCard({
         {member.email && (
           <a
             href={`mailto:${member.email}`}
-            className="inline-flex items-center text-coral text-sm hover:text-coral-dark transition-colors"
+            className="inline-flex items-center text-purple text-sm hover:text-purple-dark transition-colors"
           >
             <Mail className="h-4 w-4 mr-2" />
             {member.email}

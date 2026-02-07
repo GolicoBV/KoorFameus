@@ -65,7 +65,7 @@ export default async function EvenementenPage() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center max-w-3xl mx-auto">
             <h1 className="text-4xl font-bold text-text-primary md:text-5xl mb-4">
-              <span className="text-coral">Evenementen</span>
+              <span className="text-purple">Evenementen</span>
             </h1>
             <p className="text-lg text-text-secondary">
               Van inspirerende concerten tot gezellige workshops -
@@ -91,7 +91,7 @@ export default async function EvenementenPage() {
           ) : (
             <Card className="border-0 shadow-lg">
               <CardContent className="p-8 text-center">
-                <Calendar className="h-12 w-12 text-coral/50 mx-auto mb-4" />
+                <Calendar className="h-12 w-12 text-purple/50 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-text-primary mb-2">
                   Geen aankomende evenementen
                 </h3>
@@ -122,7 +122,7 @@ export default async function EvenementenPage() {
       )}
 
       {/* CTA Section */}
-      <section className="py-16 md:py-24 bg-coral">
+      <section className="py-16 md:py-24 bg-purple">
         <div className="container mx-auto px-4 md:px-6 text-center">
           <h2 className="text-3xl font-bold text-white md:text-4xl mb-4">
             Wil je Koor Fameus boeken?
@@ -133,7 +133,7 @@ export default async function EvenementenPage() {
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center bg-white text-coral hover:bg-gray-100 px-8 py-4 text-lg font-medium rounded-xl shadow-md hover:shadow-lg transition-all duration-200"
+            className="inline-flex items-center justify-center bg-white text-purple hover:bg-gray-100 px-8 py-4 text-lg font-medium rounded-xl shadow-md hover:shadow-lg transition-all duration-200"
           >
             Neem contact op
           </Link>
@@ -159,8 +159,8 @@ function EventCard({ event, featured }: { event: Event; featured?: boolean }) {
               className="object-cover"
             />
           ) : (
-            <div className="absolute inset-0 bg-gradient-to-br from-coral/20 to-coral/40 flex items-center justify-center">
-              <Calendar className="h-16 w-16 text-coral/50" />
+            <div className="absolute inset-0 bg-gradient-to-br from-purple/20 to-purple/40 flex items-center justify-center">
+              <Calendar className="h-16 w-16 text-purple/50" />
             </div>
           )}
         </div>
@@ -169,7 +169,7 @@ function EventCard({ event, featured }: { event: Event; featured?: boolean }) {
         <CardContent className={`p-6 ${featured ? "lg:p-8" : "md:col-span-2"}`}>
           {/* Date Badge */}
           <div className="flex items-center gap-3 mb-4">
-            <div className="flex-shrink-0 w-14 h-14 bg-coral rounded-xl flex flex-col items-center justify-center text-white">
+            <div className="flex-shrink-0 w-14 h-14 bg-purple rounded-xl flex flex-col items-center justify-center text-white">
               <span className="font-bold text-lg">{eventDate.getDate()}</span>
               <span className="text-xs uppercase">
                 {eventDate.toLocaleDateString("nl-BE", { month: "short" })}
@@ -193,7 +193,7 @@ function EventCard({ event, featured }: { event: Event; featured?: boolean }) {
 
           {event.location && (
             <p className="text-text-secondary flex items-center mb-3">
-              <MapPin className="h-4 w-4 mr-2 text-coral flex-shrink-0" />
+              <MapPin className="h-4 w-4 mr-2 text-purple flex-shrink-0" />
               {event.location}
             </p>
           )}
@@ -206,13 +206,13 @@ function EventCard({ event, featured }: { event: Event; featured?: boolean }) {
 
           {event.koren && event.koren.length > 0 && (
             <div className="flex items-center gap-2">
-              <Users className="h-4 w-4 text-coral flex-shrink-0" />
+              <Users className="h-4 w-4 text-purple flex-shrink-0" />
               <div className="flex flex-wrap gap-1">
                 {event.koren.map((koor) => (
                   <Link
                     key={koor._id}
                     href={`/koren/${koor.slug.current}`}
-                    className="text-xs bg-coral/10 text-coral px-2 py-1 rounded-full hover:bg-coral/20 transition-colors"
+                    className="text-xs bg-purple/10 text-purple px-2 py-1 rounded-full hover:bg-purple/20 transition-colors"
                   >
                     {koor.name}
                   </Link>

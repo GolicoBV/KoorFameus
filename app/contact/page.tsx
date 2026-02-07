@@ -35,7 +35,7 @@ export default async function ContactPage() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center max-w-3xl mx-auto">
             <h1 className="text-4xl font-bold text-text-primary md:text-5xl mb-4">
-              <span className="text-coral">Contact</span>
+              <span className="text-purple">Contact</span>
             </h1>
             <p className="text-lg text-text-secondary">
               Heb je vragen over lidmaatschap, optredens of wil je gewoon meer weten?
@@ -67,14 +67,14 @@ export default async function ContactPage() {
               <Card className="border-0 shadow-lg">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-xl bg-coral/10 flex items-center justify-center flex-shrink-0">
-                      <Mail className="h-6 w-6 text-coral" />
+                    <div className="w-12 h-12 rounded-xl bg-purple/10 flex items-center justify-center flex-shrink-0">
+                      <Mail className="h-6 w-6 text-purple" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-text-primary mb-1">E-mail</h3>
                       <a
                         href={`mailto:${siteSettings?.contactEmail || "info@koorfameus.be"}`}
-                        className="text-coral hover:text-coral-dark transition-colors"
+                        className="text-purple hover:text-purple-dark transition-colors"
                       >
                         {siteSettings?.contactEmail || "info@koorfameus.be"}
                       </a>
@@ -87,8 +87,8 @@ export default async function ContactPage() {
               <Card className="border-0 shadow-lg">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-xl bg-coral/10 flex items-center justify-center flex-shrink-0">
-                      <MapPin className="h-6 w-6 text-coral" />
+                    <div className="w-12 h-12 rounded-xl bg-purple/10 flex items-center justify-center flex-shrink-0">
+                      <MapPin className="h-6 w-6 text-purple" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-text-primary mb-1">Locatie</h3>
@@ -113,8 +113,8 @@ export default async function ContactPage() {
               <Card className="border-0 shadow-lg">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-xl bg-coral/10 flex items-center justify-center flex-shrink-0">
-                      <Clock className="h-6 w-6 text-coral" />
+                    <div className="w-12 h-12 rounded-xl bg-purple/10 flex items-center justify-center flex-shrink-0">
+                      <Clock className="h-6 w-6 text-purple" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-text-primary mb-1">Repetities</h3>
@@ -124,7 +124,7 @@ export default async function ContactPage() {
                       </p>
                       <a
                         href="/koren"
-                        className="text-coral text-sm hover:text-coral-dark transition-colors mt-2 inline-block"
+                        className="text-purple text-sm hover:text-purple-dark transition-colors mt-2 inline-block"
                       >
                         Bekijk onze koren →
                       </a>
@@ -134,7 +134,7 @@ export default async function ContactPage() {
               </Card>
 
               {/* Quick Questions */}
-              <Card className="border-0 shadow-lg bg-coral">
+              <Card className="border-0 shadow-lg bg-purple">
                 <CardContent className="p-6">
                   <h3 className="font-semibold text-white mb-3">Veelgestelde vragen</h3>
                   <ul className="space-y-2 text-white/90 text-sm">

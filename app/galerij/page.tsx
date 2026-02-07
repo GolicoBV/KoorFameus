@@ -44,7 +44,7 @@ export default async function GalerijPage() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center max-w-3xl mx-auto">
             <h1 className="text-4xl font-bold text-text-primary md:text-5xl mb-4">
-              <span className="text-coral">Galerij</span>
+              <span className="text-purple">Galerij</span>
             </h1>
             <p className="text-lg text-text-secondary">
               Herbeleef de mooiste momenten van Koor Fameus.
@@ -65,7 +65,7 @@ export default async function GalerijPage() {
             </div>
           ) : (
             <div className="text-center py-16">
-              <Camera className="h-16 w-16 text-coral/30 mx-auto mb-6" />
+              <Camera className="h-16 w-16 text-purple/30 mx-auto mb-6" />
               <h2 className="text-2xl font-semibold text-text-primary mb-4">
                 De galerij wordt binnenkort gevuld
               </h2>
@@ -75,7 +75,7 @@ export default async function GalerijPage() {
               </p>
               <Link
                 href="/evenementen"
-                className="inline-flex items-center text-coral font-medium hover:text-coral-dark transition-colors"
+                className="inline-flex items-center text-purple font-medium hover:text-purple-dark transition-colors"
               >
                 Bekijk onze evenementen
               </Link>
@@ -95,7 +95,7 @@ export default async function GalerijPage() {
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center bg-coral text-white hover:bg-coral-dark px-8 py-4 text-lg font-medium rounded-xl shadow-md hover:shadow-lg transition-all duration-200"
+            className="inline-flex items-center justify-center bg-purple text-white hover:bg-purple-dark px-8 py-4 text-lg font-medium rounded-xl shadow-md hover:shadow-lg transition-all duration-200"
           >
             Stuur ons je foto's
           </Link>
@@ -118,8 +118,8 @@ function AlbumCard({ album }: { album: GalleryAlbum }) {
               className="object-cover transition-transform duration-300 group-hover:scale-105"
             />
           ) : (
-            <div className="absolute inset-0 bg-gradient-to-br from-coral/20 to-coral/40 flex items-center justify-center">
-              <Images className="h-16 w-16 text-coral/50" />
+            <div className="absolute inset-0 bg-gradient-to-br from-purple/20 to-purple/40 flex items-center justify-center">
+              <Images className="h-16 w-16 text-purple/50" />
             </div>
           )}
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />

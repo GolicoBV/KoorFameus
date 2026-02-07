@@ -47,7 +47,7 @@ export default async function KorenPage() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center max-w-3xl mx-auto">
             <h1 className="text-4xl font-bold text-text-primary md:text-5xl mb-4">
-              Onze <span className="text-coral">Koren</span>
+              Onze <span className="text-purple">Koren</span>
             </h1>
             <p className="text-lg text-text-secondary">
               Koor Fameus bestaat uit drie koren, elk afgestemd op een specifieke leeftijdsgroep.
@@ -75,7 +75,7 @@ export default async function KorenPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 md:py-24 bg-coral">
+      <section className="py-16 md:py-24 bg-purple">
         <div className="container mx-auto px-4 md:px-6 text-center">
           <h2 className="text-3xl font-bold text-white md:text-4xl mb-4">
             Wil je lid worden?
@@ -86,7 +86,7 @@ export default async function KorenPage() {
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center bg-white text-coral hover:bg-gray-100 px-8 py-4 text-lg font-medium rounded-xl shadow-md hover:shadow-lg transition-all duration-200"
+            className="inline-flex items-center justify-center bg-white text-purple hover:bg-gray-100 px-8 py-4 text-lg font-medium rounded-xl shadow-md hover:shadow-lg transition-all duration-200"
           >
             Neem contact op
             <ArrowRight className="ml-2 h-5 w-5" />
@@ -111,12 +111,12 @@ function KoorDetailCard({ koor, reversed }: { koor: Koor; reversed: boolean }) {
               className="object-cover"
             />
           ) : (
-            <div className="absolute inset-0 bg-gradient-to-br from-coral/20 to-coral/40 flex items-center justify-center">
+            <div className="absolute inset-0 bg-gradient-to-br from-purple/20 to-purple/40 flex items-center justify-center">
               <span className="text-6xl">🎵</span>
             </div>
           )}
           {koor.ageRange && (
-            <span className="absolute top-4 left-4 bg-coral text-white text-sm font-medium px-4 py-2 rounded-full">
+            <span className="absolute top-4 left-4 bg-purple text-white text-sm font-medium px-4 py-2 rounded-full">
               {koor.ageRange}
             </span>
           )}
@@ -141,13 +141,13 @@ function KoorDetailCard({ koor, reversed }: { koor: Koor; reversed: boolean }) {
               </h3>
               {koor.schedule.map((item, idx) => (
                 <div key={idx} className="flex items-center gap-3 text-text-secondary">
-                  <Clock className="h-4 w-4 text-coral flex-shrink-0" />
+                  <Clock className="h-4 w-4 text-purple flex-shrink-0" />
                   <span>
                     {item.day}: {item.startTime} - {item.endTime}
                   </span>
                   {item.location && (
                     <>
-                      <MapPin className="h-4 w-4 text-coral flex-shrink-0 ml-2" />
+                      <MapPin className="h-4 w-4 text-purple flex-shrink-0 ml-2" />
                       <span className="text-text-muted">{item.location}</span>
                     </>
                   )}
@@ -158,7 +158,7 @@ function KoorDetailCard({ koor, reversed }: { koor: Koor; reversed: boolean }) {
 
           <Link
             href={`/koren/${koor.slug.current}`}
-            className="inline-flex items-center text-coral font-semibold hover:text-coral-dark transition-colors group"
+            className="inline-flex items-center text-purple font-semibold hover:text-purple-dark transition-colors group"
           >
             Meer informatie
             <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />

@@ -109,7 +109,7 @@ export default async function KoorDetailPage({ params }: PageProps) {
             priority
           />
         ) : (
-          <div className="absolute inset-0 bg-gradient-to-br from-coral/30 to-coral/60" />
+          <div className="absolute inset-0 bg-gradient-to-br from-purple/30 to-purple/60" />
         )}
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
 
@@ -126,7 +126,7 @@ export default async function KoorDetailPage({ params }: PageProps) {
               {koor.name}
             </h1>
             {koor.ageRange && (
-              <span className="inline-block bg-coral text-white text-sm font-medium px-4 py-2 rounded-full">
+              <span className="inline-block bg-purple text-white text-sm font-medium px-4 py-2 rounded-full">
                 {koor.ageRange}
               </span>
             )}
@@ -160,12 +160,12 @@ export default async function KoorDetailPage({ params }: PageProps) {
                 <Card className="border-0 shadow-lg">
                   <CardContent className="p-6">
                     <h3 className="text-lg font-semibold text-text-primary mb-4 flex items-center">
-                      <Clock className="h-5 w-5 text-coral mr-2" />
+                      <Clock className="h-5 w-5 text-purple mr-2" />
                       Repetitietijden
                     </h3>
                     <div className="space-y-3">
                       {koor.schedule.map((item, idx) => (
-                        <div key={idx} className="border-l-2 border-coral pl-4 py-1">
+                        <div key={idx} className="border-l-2 border-purple pl-4 py-1">
                           <p className="font-medium text-text-primary">{item.day}</p>
                           <p className="text-text-secondary">
                             {item.startTime} - {item.endTime}
@@ -188,7 +188,7 @@ export default async function KoorDetailPage({ params }: PageProps) {
                 <Card className="border-0 shadow-lg">
                   <CardContent className="p-6">
                     <h3 className="text-lg font-semibold text-text-primary mb-4 flex items-center">
-                      <Users className="h-5 w-5 text-coral mr-2" />
+                      <Users className="h-5 w-5 text-purple mr-2" />
                       Begeleiders
                     </h3>
                     <div className="space-y-4">
@@ -203,8 +203,8 @@ export default async function KoorDetailPage({ params }: PageProps) {
                               className="rounded-full object-cover"
                             />
                           ) : (
-                            <div className="w-12 h-12 rounded-full bg-coral/10 flex items-center justify-center">
-                              <span className="text-coral font-medium">
+                            <div className="w-12 h-12 rounded-full bg-purple/10 flex items-center justify-center">
+                              <span className="text-purple font-medium">
                                 {member.name.charAt(0)}
                               </span>
                             </div>
@@ -218,7 +218,7 @@ export default async function KoorDetailPage({ params }: PageProps) {
                     </div>
                     <Link
                       href="/wie-zijn-wij"
-                      className="inline-flex items-center text-coral text-sm font-medium mt-4 hover:text-coral-dark transition-colors"
+                      className="inline-flex items-center text-purple text-sm font-medium mt-4 hover:text-purple-dark transition-colors"
                     >
                       Ontmoet het hele team
                       <ArrowRight className="ml-1 h-4 w-4" />
@@ -228,7 +228,7 @@ export default async function KoorDetailPage({ params }: PageProps) {
               )}
 
               {/* CTA Card */}
-              <Card className="border-0 shadow-lg bg-coral">
+              <Card className="border-0 shadow-lg bg-purple">
                 <CardContent className="p-6 text-center">
                   <h3 className="text-lg font-semibold text-white mb-2">
                     Interesse?
@@ -238,7 +238,7 @@ export default async function KoorDetailPage({ params }: PageProps) {
                   </p>
                   <Button
                     asChild
-                    className="w-full bg-white text-coral hover:bg-gray-100"
+                    className="w-full bg-white text-purple hover:bg-gray-100"
                   >
                     <Link href="/contact">Neem contact op</Link>
                   </Button>
