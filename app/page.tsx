@@ -59,8 +59,7 @@ export default async function Home() {
           {/* Glow effect */}
           <path
             d="M50 0
-               C0 250, 100 250, 50 500
-               C0 750, 100 750, 50 1000"
+               C0 500, 100 500, 50 1000"
             stroke="url(#gradient)"
             strokeWidth="6"
             fill="none"
@@ -69,21 +68,18 @@ export default async function Home() {
           {/* Main flowing curve */}
           <path
             d="M50 0
-               C0 250, 100 250, 50 500
-               C0 750, 100 750, 50 1000"
+               C0 500, 100 500, 50 1000"
             stroke="url(#gradient)"
             strokeWidth="1"
             fill="none"
             opacity="0.5"
           />
           {/* Music symbols along the curve */}
-          <text x="25" y="125" fontSize="6" fill="url(#gradient)" opacity="0.4">&#119070;</text>
-          <text x="75" y="250" fontSize="4" fill="url(#gradient)" opacity="0.3">&#9834;</text>
-          <text x="30" y="375" fontSize="5" fill="url(#gradient)" opacity="0.35">&#9835;</text>
-          <text x="70" y="500" fontSize="6" fill="url(#gradient)" opacity="0.4">&#119070;</text>
-          <text x="25" y="625" fontSize="4" fill="url(#gradient)" opacity="0.3">&#9833;</text>
-          <text x="75" y="750" fontSize="5" fill="url(#gradient)" opacity="0.35">&#9834;</text>
-          <text x="30" y="875" fontSize="6" fill="url(#gradient)" opacity="0.4">&#119070;</text>
+          <text x="30" y="200" fontSize="6" fill="url(#gradient)" opacity="0.4">&#119070;</text>
+          <text x="20" y="400" fontSize="4" fill="url(#gradient)" opacity="0.3">&#9834;</text>
+          <text x="50" y="500" fontSize="5" fill="url(#gradient)" opacity="0.35">&#9835;</text>
+          <text x="80" y="600" fontSize="6" fill="url(#gradient)" opacity="0.4">&#119070;</text>
+          <text x="70" y="800" fontSize="4" fill="url(#gradient)" opacity="0.3">&#9833;</text>
           <defs>
             <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
               <stop offset="0%" stopColor="var(--color-purple)" />
